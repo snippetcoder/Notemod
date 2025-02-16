@@ -570,6 +570,7 @@ temaDegis.addEventListener('click', () => {
 });
 
 function handleWindowResize() {
+    const getNotes = localStorage.getItem('notes');
   const windowWidth = window.innerWidth;
   if (windowWidth < 1000) {
     sidebar.style.width = '100%';
@@ -584,7 +585,11 @@ function handleWindowResize() {
     noteBar.style.visibility = 'visible';
     noteBar.style.display = 'grid';
     sidebarButton.style.display = 'block';
+if (getNotes && getNotes.length > 0) { 
     noteContentIc.style.display = 'block';
+  }else{
+    noteContentIc.style.display = 'none';
+}
     noteContent.style.display = 'block';
   }
 }
