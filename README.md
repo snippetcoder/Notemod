@@ -39,7 +39,7 @@ Notemod is built with transparency in mind. Feel free to contribute, inspect the
 ### 5. Offline Access
 No internet? No worries! Use Notemod as a standalone HTML file on your computer.
 
----
+![](notemod.jpg)
 
 ## Get Started
 
