@@ -4,7 +4,7 @@ At **Notemod**, we believe that taking notes should be simple, powerful, and acc
 
 ---
 
-## Why Choose Notemod?
+## Features
 
 Here’s what makes Notemod stand out:
 
