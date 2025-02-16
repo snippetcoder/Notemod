@@ -31,7 +31,7 @@ Format your notes with:
 - And more!
 
 ### 3. Data Security
-Your data belongs to you. Export your notes to your local machine or import them from other devices seamlessly.
+Your data belongs to you and is saved in localstorage in the browser you will use.
 
 ### 4. Open Source
 Notemod is built with transparency in mind. Feel free to contribute, inspect the code, or modify it to suit your needs.
