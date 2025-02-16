@@ -43,15 +43,9 @@ No internet? No worries! Use Notemod as a standalone HTML file on your computer.
 
 ## Get Started
 
-To start using Notemod, simply clone the repository and follow the instructions in the [installation guide](#installation).
+You can download our application notemod.html file and run it in the browser or you can use it online by clicking the link below.
 
----
-
-## Contributing
-
-We welcome contributions from the community! Check out our [contributing guidelines](CONTRIBUTING.md) to get started.
-
----
+[Notemod Online](https://app-notemod.blogspot.com)
 
 ## License
 
