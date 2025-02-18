@@ -1519,7 +1519,8 @@ function deleteNoteInContent() {
       saveData(false);
       renderNotes();
       setTimeout(() => {
-        noteContentIc.style.display = 'none';
+noteEditor.innerHTML = ''; 
+noteTitleInput.value = '';
 window.addEventListener('resize', () => {
 const windowWidth = window.innerWidth;
   if (windowWidth < 1000) {
