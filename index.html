@@ -389,66 +389,74 @@ back: {AR:"رجوع",DE:"Zurück",EN:"Back",ES:"Atrás",FA:"بازگشت",FR:"Re
 function translate(key, langCode = localStorage.getItem("selectedLanguage") || "EN") {return translations[key]?.[langCode] || translations[key]["EN"];}
 document.addEventListener("DOMContentLoaded", function () {
 const languageButton = document.getElementById("languege");
-const languages = [{ name: "العربية", code: "AR" },{ name: "Deutsch", code: "DE" },{ name: "English", code: "EN" },{ name: "Español", code: "ES" },{ name: "فارسی", code: "FA" },{ name: "Français", code: "FR" },{ name: "हिन्दी", code: "HI" },{ name: "Indonesian", code: "ID" },{ name: "Italiano", code: "IT" },{ name: "日本語", code: "JA" },{ name: "한국어", code: "KO" },{ name: "Kiswahili", code: "SW" },{ name: "Polski", code: "PL" },{ name: "Português", code: "PT" },{ name: "Русский", code: "RU" },{ name: "Tiếng Việt", code: "VI" },{ name: "Türkçe", code: "TR" },{ name: "اردو", code: "UR" },{ name: "Oʻzbekcha", code: "UZ" },{ name: "中文", code: "ZH" }];
- let selectLangCode = localStorage.getItem("selectedLanguage") || "EN";
+const languages = [{ name:"العربية", code:"AR"},{ name:"Deutsch", code:"DE"},{ name:"English", code:"EN"},{ name:"Español", code:"ES"},{ name:"فارسی", code:"FA"},{ name:"Français", code:"FR"},{ name:"हिन्दी", code:"HI"},{ name:"Indonesian", code:"ID"},{ name:"Italiano", code:"IT"},{ name:"日本語", code:"JA"},{ name:"한국어", code:"KO"},{ name:"Kiswahili", code:"SW"},{ name:"Polski", code:"PL"},{ name:"Português", code:"PT"},{ name:"Русский", code:"RU"},{ name:"Tiếng Việt", code:"VI"},{ name:"Türkçe", code:"TR"},{ name:"اردو", code:"UR"},{ name:"Oʻzbekcha", code:"UZ"},{ name:"中文", code:"ZH" }];
+let selectLangCode = localStorage.getItem("selectedLanguage") || "EN";
 let selectedLanguage = languages.find(lang => lang.code === selectLangCode)?.name || "English";
 document.documentElement.lang = selectLangCode.toLowerCase();
+const isFirstVisit = localStorage.getItem("hasSelectedLanguage") !== "true";
 let modal_dil;
 let secondModal;
 function createMainModal() {
-modal_dil = document.createElement("div");
-modal_dil.className = "modal";
-modal_dil.innerHTML = `
-<div class="modal_dil-content">
-<div class="gecerli_dil">${selectedLanguage}</div>
-<div id="arrow" class="dili_degistir">${translate("change_language")}</div>
-<button class="close_main_modal">${translate("close_button")}</button>
-</div>
-`;
-document.body.appendChild(modal_dil);
-modal_dil.querySelector(".dili_degistir").addEventListener("click", createLanguageSelectionModal);
-modal_dil.querySelector(".close_main_modal").addEventListener("click", function () {
-modal_dil.style.display = "none";
-});
+    modal_dil = document.createElement("div");
+    modal_dil.className = "modal";
+    modal_dil.innerHTML = `
+        <div class="modal_dil-content">
+            <div class="gecerli_dil">${selectedLanguage}</div>
+            <div id="arrow" class="dili_degistir">${translate("change_language")}</div>
+            <button class="close_main_modal">${translate("close_button")}</button>
+        </div>
+    `;
+    document.body.appendChild(modal_dil);
+    modal_dil.querySelector(".dili_degistir").addEventListener("click", createLanguageSelectionModal);
+    modal_dil.querySelector(".close_main_modal").addEventListener("click", function () {
+        modal_dil.style.display = "none";
+    });
 }
 function createLanguageSelectionModal() {
-if (secondModal) secondModal.remove();
-secondModal = document.createElement("div");
-secondModal.className = "modal";
-let modalContent = `<div class="modal_dil-content2">`;
-const sortedLanguages = [...languages].sort((a, b) => {
-    return a.code === selectLangCode ? -1 : b.code === selectLangCode ? 1 : 0;
-});
-sortedLanguages.forEach(lang => {
-modalContent += `
-<label class="checkbox-design">
-<input type="checkbox" name="language" value="${lang.code}" ${lang.code === selectLangCode ? "checked" : ""}>
-<span class="checkbox-square"></span>${lang.name}
-</label>
-`;
-});
-modalContent += `</div>`;
-secondModal.innerHTML = modalContent;
-document.body.appendChild(secondModal);
-document.querySelectorAll('input[name="language"]').forEach(input => {
-input.addEventListener("change", saveLanguage);
-});
+    if (secondModal) secondModal.remove();
+    secondModal = document.createElement("div");
+    secondModal.className = "modal";
+    let modalContent = `<div class="modal_dil-content2">`;
+    const sortedLanguages = [...languages].sort((a, b) => {
+        return a.code === selectLangCode ? -1 : b.code === selectLangCode ? 1 : 0;
+    });
+    sortedLanguages.forEach(lang => {
+        modalContent += `
+            <label class="checkbox-design">
+                <input type="checkbox" name="language" value="${lang.code}" ${lang.code === selectLangCode ? "checked" : ""}>
+                <span class="checkbox-square"></span>${lang.name}
+            </label>
+        `;
+    });
+    modalContent += `</div>`;
+    secondModal.innerHTML = modalContent;
+    document.body.appendChild(secondModal);
+    document.querySelectorAll('input[name="language"]').forEach(input => {
+        input.addEventListener("change", saveLanguage);
+    });
 }
 function saveLanguage(event) {
-selectLangCode = event.target.value;
-selectedLanguage = languages.find(lang => lang.code === selectLangCode)?.name || "English";
-localStorage.setItem("selectedLanguage", selectLangCode);
-modal_dil.querySelector(".gecerli_dil").textContent = selectedLanguage;
-document.documentElement.lang = selectLangCode.toLowerCase();
-modal_dil.querySelector(".close_main_modal").textContent = translate("close_button");
-modal_dil.querySelector(".dili_degistir").textContent = translate("change_language");
-secondModal.remove();
-location.reload();
+    selectLangCode = event.target.value;
+    selectedLanguage = languages.find(lang => lang.code === selectLangCode)?.name || "English";
+    localStorage.setItem("selectedLanguage", selectLangCode);
+    localStorage.setItem("hasSelectedLanguage", "true"); 
+    modal_dil.querySelector(".gecerli_dil").textContent = selectedLanguage;
+    document.documentElement.lang = selectLangCode.toLowerCase();
+    modal_dil.querySelector(".close_main_modal").textContent = translate("close_button");
+    modal_dil.querySelector(".dili_degistir").textContent = translate("change_language");
+    secondModal.remove();
+    location.reload();
 }
 languageButton.addEventListener("click", function () {
-if (!modal_dil) {createMainModal();}
-modal_dil.style.display = "flex";
+    if (!modal_dil) {
+        createMainModal();
+    }
+    modal_dil.style.display = "flex";
 });
+if (isFirstVisit) {
+    createMainModal();
+    modal_dil.style.display = "flex";
+}
 });
 //setupResizer
 function setupResizer(resizerSelector, minWidth = 220, maxWidth = 700) {
