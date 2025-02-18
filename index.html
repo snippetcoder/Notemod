@@ -1516,9 +1516,6 @@ function deleteNoteInContent() {
         }
       }
       selectedNote = null;
-      saveData(false);
-      renderNotes();
-window.addEventListener('resize', () => {
 const windowWidth = window.innerWidth;
   if (windowWidth < 1000) {
       sidebar.style.display = 'grid';
@@ -1527,8 +1524,8 @@ const windowWidth = window.innerWidth;
   }else{
       noteContentIc.style.display = 'none';
 }
-});
-window.dispatchEvent(new Event('resize'));
+    saveData(false);
+    renderNotes();
     }
     removeModal();
   };
