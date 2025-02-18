@@ -1518,19 +1518,17 @@ function deleteNoteInContent() {
       selectedNote = null;
       saveData(false);
       renderNotes();
-      setTimeout(() => {
-noteEditor.innerHTML = ''; 
-noteTitleInput.value = '';
 window.addEventListener('resize', () => {
 const windowWidth = window.innerWidth;
   if (windowWidth < 1000) {
       sidebar.style.display = 'grid';
        sidebar.style.width = '100%';
       noteContent.style.display = 'none';
-  }
+  }else{
+      noteContentIc.style.display = 'none';
+}
 });
 window.dispatchEvent(new Event('resize'));
-      }, 100);
     }
     removeModal();
   };
