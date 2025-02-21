@@ -409,6 +409,10 @@ function createMainModal() {
     document.body.appendChild(modal_dil);
     modal_dil.querySelector(".dili_degistir").addEventListener("click", createLanguageSelectionModal);
     modal_dil.querySelector(".close_main_modal").addEventListener("click", function () {
+        if (isFirstVisit) {
+    localStorage.setItem("selectedLanguage", "EN");
+    localStorage.setItem("hasSelectedLanguage", "true"); 
+}
         modal_dil.style.display = "none";
     });
 }
