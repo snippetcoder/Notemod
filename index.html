@@ -329,7 +329,7 @@ button.thiza_button:lang(ar), button.thiza_button:lang(fa) {float: right;}
 .ust_content {display: flex;align-items: baseline;}
 div#arrow.geriContent {display: inline-flex;padding-right: 12px;}
 input#note-title {display: inline-flex;}
-#editor_div{max-height:56%;min-height:56%;}
+#editor_div{max-height:66%;min-height:66%;}
 input#note-content-search,input#note-search{display: none;}
 .omod #omod_toggle {float: right; display: block;margin-left: 0;}
 .toolbar button {margin:2px;}
@@ -351,9 +351,11 @@ button.tab{padding: 6px 8px;width: 100%;}
 .tooltip{opacity: 0!important;visibility: hidden!important;}
 .category-item span,.note-item span{white-space:normal;line-height:25px;text-overflow:unset;}
 .omod .toolbar{width:auto;}
-#save_date_hiza,#editor_div{top:58px;position:relative;}
+#save_date_hiza,#editor_div{position:relative;}
 .toolbar button{margin:4px;}
-.toolbar_hiza{overflow-x:auto;width:100%;display:block;position:absolute;scrollbar-width:none;}
+.note-content-ic {height: calc(100% - 36px);}
+.toolbar_hiza{overflow-x:auto;width:100%;z-index: 999999;display:block;position:absolute;bottom: calc(0px - 53px);scrollbar-width:none;}
+.omod .toolbar_hiza {position: relative;bottom: auto;z-index: 2;}
 .toolbar{background:#1f2a3d;display:block;padding:6px 7px;margin-bottom:5px;border-radius:5px;position:relative;width:max-content;scrollbar-width:none;top:0;overflow-x:auto;}
 .modal_dil-content2 {grid-template-rows: repeat(10, auto);}
 }
