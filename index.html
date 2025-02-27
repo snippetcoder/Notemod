@@ -12,21 +12,42 @@
 html,body{overflow: hidden;top: 0;height: 100%;padding: 0;margin: 0;}
 body{font-family:'OpenSans';font-size: 17px;position: relative;display:flex;flex-direction: column;background-color:#1e293c;color:#a2c1f4}
 body:lang(ar),body:lang(fa){font-family:KSARegular}
-#add-category-button:lang(ar),#add-category-button:lang(fa),#add-note-button:lang(ar),#add-note-button:lang(fa),#cancelDelete:lang(ar),#cancelDelete:lang(fa),#confirmDelete:lang(ar),#confirmDelete:lang(fa),#delete-note-button:lang(ar),#delete-note-button:lang(fa),#save-note-button:lang(ar),#save-note-button:lang(fa),.category-item span:lang(ar),.category-item span:lang(fa),.close_main_modal:lang(ar),.close_main_modal:lang(fa),.delete-cancel:lang(ar),.delete-cancel:lang(fa),.delete-confirm:lang(ar),.delete-confirm:lang(fa),.modal-content:lang(ar),.modal-content:lang(fa),.modal_dil-content:lang(ar),.modal_dil-content:lang(fa),.note-item span:lang(ar),.note-item span:lang(fa),.rich-text-editor:lang(ar),.rich-text-editor:lang(fa),.settool button:lang(ar)::before,.settool button:lang(fa)::before,.toolbar #omod_toggle:lang(ar)::before,.toolbar #omod_toggle:lang(fa)::before,.toolbar button:lang(ar)::before,.toolbar button:lang(fa)::before,.tooltip:lang(ar),.tooltip:lang(fa),input#note-content-search:lang(ar),input#note-content-search:lang(fa),input#note-search:lang(ar),input#note-search:lang(fa),input:lang(ar),input:lang(fa),td:lang(ar),td:lang(fa),textarea:lang(ar),textarea:lang(fa),th:lang(ar),th:lang(fa){font-family:KSARegular;font-size:28px;line-height:32px;direction:rtl;unicode-bidi:isolate;text-align:right}
+#add-category-button:lang(ar),#add-category-button:lang(fa),#add-note-button:lang(ar),#add-note-button:lang(fa),#add-task-button:lang(ar),#add-task-button:lang(fa),#cancelDelete:lang(ar),#cancelDelete:lang(fa),#confirmDelete:lang(ar),#confirmDelete:lang(fa),#delete-note-button:lang(ar),#delete-note-button:lang(fa),#save-note-button:lang(ar),#save-note-button:lang(fa),.category-item span:lang(ar),.category-item span:lang(fa),.close_main_modal:lang(ar),.close_main_modal:lang(fa),.delete-cancel:lang(ar),.delete-cancel:lang(fa),.delete-confirm:lang(ar),.delete-confirm:lang(fa),.modal-content:lang(ar),.modal-content:lang(fa),.modal_dil-content:lang(ar),.modal_dil-content:lang(fa),.note-item span:lang(ar),.note-item span:lang(fa),.rich-text-editor:lang(ar),.rich-text-editor:lang(fa),.settool button:lang(ar)::before,.settool button:lang(fa)::before,.toolbar #omod_toggle:lang(ar)::before,.toolbar #omod_toggle:lang(fa)::before,.toolbar button:lang(ar)::before,.toolbar button:lang(fa)::before,.tooltip:lang(ar),.tooltip:lang(fa),input#note-content-search:lang(ar),input#note-content-search:lang(fa),input#note-search:lang(ar),input#note-search:lang(fa),input:lang(ar),input:lang(fa),td:lang(ar),td:lang(fa),textarea:lang(ar),textarea:lang(fa),th:lang(ar),th:lang(fa),.task_date_div:lang(ar),.task_date_div:lang(fa), .subtask_list_wrapper:lang(ar),.subtask_list_wrapper:lang(fa),button.tab:lang(ar),button.tab:lang(fa),.date_div:lang(ar),.date_div:lang(fa),.delete-all-completed-button:lang(ar),.delete-all-completed-button:lang(fa),.task_container textarea:lang(ar), #subTaskModalContent textarea:lang(ar),.task_container textarea:lang(fa), #subTaskModalContent textarea:lang(fa){font-family:KSARegular;font-size:24px;line-height:24px;direction:rtl;unicode-bidi:isolate;text-align:right}
+.edit_delete_div:lang(ar),.sub_edit_delete_div:lang(ar),.edit_delete_div:lang(fa),.sub_edit_delete_div:lang(fa){left: 10px;right: auto;}
 .category-item:lang(ar),.category-item:lang(fa),.note-item:lang(ar),.note-item:lang(fa){flex-direction:row-reverse}
 .category-item span:lang(ar),.category-item span:lang(fa),.note-item span:lang(ar),.note-item span:lang(fa){padding:4px 24px 6px 4px}
 .category-item:lang(ar):hover>button,.category-item:lang(fa):hover>button,.note-item:lang(ar):hover>button,.note-item:lang(fa):hover>button{margin-right:0;margin-left:8px}
-.category-item span:lang(ar):before,.category-item span:lang(fa):before,.note-item span:lang(ar):before,.note-item span:lang(fa):before{right:6px;left:0}
+.task_date_div:lang(ar), .subtask_list_wrapper:lang(ar),.task_date_div:lang(fa), .subtask_list_wrapper:lang(fa) {padding: 5px 26px 5px 55px;}
+div#note-created-date:lang(ar),div#note-created-date:lang(fa) {float: left;}
+p#save-status:lang(ar),p#save-status:lang(fa){text-align: right;}
+.subtask_list_wrapper:lang(ar),.subtask_list_wrapper:lang(fa) {margin-left: 0;margin-right: 15px;}
+input#note-content-search:lang(ar),input#note-content-search:lang(fa),input#note-search:lang(ar),input#note-search:lang(fa) {padding: 0px 8px;}
+div#delete-note-button:lang(ar),div#save-note-button:lang(ar),div#delete-note-button:lang(fa),div#save-note-button:lang(fa){float: right;}
+.rich-text-editor:lang(ar),.rich-text-editor:lang(fa) {line-height: 30px;}
+#arrow:lang(ar):after,#arrow:lang(fa):after{right: auto;left: 0;}
+.togglediv:lang(ar):after,.togglediv:lang(fa):after {right: 4px;left: 0px;}
+input[type="date"]:lang(ar),input[type="date"]:lang(fa) {background-position: left 9px center;}
+.category-item span:lang(ar):before,.category-item span:lang(fa):before,.note-item span:lang(ar):before,.note-item span:lang(fa):before,.task_date_div span:lang(ar):before, .subtask_list_wrapper span:lang(ar):before,.task_date_div span:lang(fa):before, .subtask_list_wrapper span:lang(fa):before,.date_span:lang(ar),.date_span:lang(fa){right:6px;left:0}
 .category-item:lang(ar):hover>button,.category-item:lang(fa):hover>button,.note-item:lang(ar):hover>button,.note-item:lang(fa):hover>button{margin-left:8px}
-#add-category-button:lang(ar)::before,#add-category-button:lang(fa)::before,#add-note-button:lang(ar)::before,#add-note-button:lang(fa)::before{content:"";right:-4px;left:0;top:-3px}
+button.thiza_button:lang(ar),button.thiza_button:lang(fa) {float: left;}
+.tabs-container:lang(ar),.tabs-container:lang(fa),button.gorev_ekle:lang(ar),button.gorev_ekle:lang(fa),.delete-all-completed-button:lang(ar),.delete-all-completed-button:lang(fa) {float: right;margin-top: 5px;}
+.tabs-container:lang(ar),.tabs-container:lang(fa){display: flex;flex-flow: row-reverse;}
+button.tab:lang(ar):first-child,button.tab:lang(fa):first-child{border-bottom-right-radius:5px;border-top-right-radius:5px;border-bottom-left-radius:0;border-top-left-radius:0;}
+button.tab:lang(ar):last-child,button.tab:lang(fa):last-child{border-bottom-left-radius:5px;border-bottom-right-radius:0;border-top-left-radius:5px;border-top-right-radius:0;border-right:solid 1px #394f77;}
+.task-list:lang(ar),.task-list:lang(fa){clear: both;top: 15px;position: relative;}
+.task-list.thiza:lang(ar),.task-list.thiza:lang(fa),.toolbar_hiza:lang(ar),.toolbar_hiza:lang(fa){direction: rtl;}
+#add-task-button:lang(ar)::before,.alt_gorev_ekle:lang(ar)::before,.gorev_ekle:lang(ar)::before,#add-task-button:lang(fa)::before,.alt_gorev_ekle:lang(fa)::before,.gorev_ekle:lang(fa)::before{right: -4px;left: auto;}
+.date_span:lang(ar),.date_span:lang(fa),button.alt_gorev_ekle:lang(ar),button.alt_gorev_ekle:lang(fa){font-size: 18px;}
+#add-category-button:lang(ar)::before,#add-category-button:lang(fa)::before,#add-note-button:lang(ar)::before,#add-note-button:lang(fa)::before,#add-task-button:lang(ar)::before,#add-task-button:lang(fa)::before{content:"";right:-4px;left:0;top:-3px}
 button.category-delete-button:lang(ar),button.category-delete-button:lang(fa){float:left}
 .gecerli_dil:lang(ar):before,.gecerli_dil:lang(fa):before{left:0;right:0}
 .gecerli_dil:lang(ar),.gecerli_dil:lang(fa){padding-right:23px;padding-left:0}
 .dili_degistir:lang(ar):after,.dili_degistir:lang(fa):after{content:'';right:auto;left:0;transform:rotate(180deg)}
-.toolbar:lang(ar),.toolbar:lang(fa){display:flex;justify-content:flex-start;flex-direction:row-reverse;gap:6px}
 .omod input#note-title:lang(ar),.omod input#note-title:lang(fa){padding-left:0;top: 0px;padding-right:60px}
 div#note-editor h1:lang(ar),div#note-editor h1:lang(fa){font-size:27px}
 div#note-editor h2:lang(ar),div#note-editor h2:lang(fa){font-size:25px}
+div#omod_toggle:not(.omod #omod_toggle):lang(ar),div#omod_toggle:not(.omod #omod_toggle):lang(fa) {float: left;right: -6px;}
+div#omod_toggle:lang(ar)::before,div#omod_toggle:lang(fa)::before {left: -6px !important;right: auto !important;}
 .container:lang(ar),.container:lang(fa){flex-direction:row-reverse}
 .resizer:lang(ar),.resizer:lang(fa){position:absolute;left:-5px;top:0;width:10px;height:100%;cursor:col-resize}
 .sidebar.initialized.collapsed:lang(ar),.sidebar.initialized.collapsed:lang(fa){right:-260px;left:unset}
@@ -41,13 +62,14 @@ div#note-created-date:lang(ar),div#note-created-date:lang(fa){font-size:21px}
 .rich-text-editor ul:lang(ar),.rich-text-editor ul:lang(fa){padding-left:0;padding-right:0}
 .rich-text-editor ul li::before:lang(ar),.rich-text-editor ul li::before:lang(fa){content:"•";left:0;right:-7px}
 .rich-text-editor ul li:lang(ar),.rich-text-editor ul li:lang(fa){padding-left:0;padding-right:7px}
-#add-category-button:lang(ar),#add-category-button:lang(fa),#add-note-button:lang(ar),#add-note-button:lang(fa),input:lang(ar),input:lang(fa){padding:4px 8px}
+#add-category-button:lang(ar),#add-category-button:lang(fa),#add-note-button:lang(ar),#add-note-button:lang(fa),input:lang(ar),input:lang(fa),#add-task-button:lang(ar),#add-task-button:lang(fa){padding:4px 8px}
 #delete-note-button:lang(ar),#delete-note-button:lang(fa),#save-note-button:lang(ar),#save-note-button:lang(fa){line-height:25px}
 #color-button:lang(ar),#color-button:lang(fa){top:1px}
 #save-status:lang(ar),#save-status:lang(fa){font-size:24px}
 .resize-handle:lang(ar),.resize-handle:lang(fa){display:none!important}
 table:lang(ar),table:lang(fa){width:auto!important}
-
+button.tab:lang(ar),button.tab:lang(fa) {padding: 4px 12px;text-align: center;}
+.delete-all-completed-button:lang(ar), .delete-all-completed-button:lang(fa) {text-align: center;}
 hr{border-bottom:2px solid #4f6b9a;padding-bottom:3px;}
 input[type="checkbox"] {width: unset;}
 a{color: #61c0ff;cursor: pointer;}
@@ -80,14 +102,19 @@ ul#note-list,#category-list{overflow-x: hidden;}
 .rich-text-editor ol {list-style: decimal;margin-block-start: 0em;list-style-position:inside;padding-left: 0;}
 .rich-text-editor ul li {position: relative;padding-left: 7px;}
 .rich-text-editor ul li::before {content: "•";position: relative;left: -7px;top: 1px;color: #a2c1f4;font-size: 21px;}
-.category-item span.dragging {background-color: #304262;}
 .note-item span.dragging {background-color: #364b6d;}
-.dragging {border: solid 1px #2c84d2;padding: 5px 0px 5px 24px;white-space: nowrap;overflow: hidden;text-overflow: ellipsis;border-radius: 5px;} 
-.placeholder{cursor: move; display: block;border: solid 1px rgb(15, 45, 71);width: 100%;border-radius: 5px;background: #1b2434; height: 42px;}
+.dragging {background-color: #304262;white-space: nowrap;overflow: hidden;text-overflow: ellipsis;box-sizing: border-box;border-bottom: 1px solid #2c84d2!important;}
+.task_date_div.dragging{white-space: unset;height: max-content}
+.placeholder{cursor: move; display: block;border: solid 1px rgb(15, 45, 71);width: 100%;border-radius: 5px;background: #1b2434; height: 37px;}
+.task-list.thiza .placeholder {padding: 11px 0 11px 0;}
+.task-list .placeholder {padding: 11px 55px 11px 26px;margin-bottom: 10px;}
+.subtasks_list_container .placeholder {margin-left: 15px;padding: 9px 55px 9px 26px;margin-bottom: 10px;}
+.subtask_list_wrapper.dragging {white-space: unset;height: max-content;}
 .temporary-placeholder { display: block; visibility: hidden; height: 0; }
-#drag-preview { z-index: 9999; pointer-events: none; }
+#drag-preview { z-index: 9999; pointer-events: none;margin-left: 0;}
 .category-item span,.note-item span{white-space: nowrap;overflow: hidden;position: relative; text-overflow: ellipsis;flex-grow:1;padding: 5px 0px 5px 24px;text-align: left;}
 .category-item,.note-item{white-space: nowrap;text-overflow: ellipsis;width: 100%; border-radius: 5px;cursor:pointer;position: relative;border-bottom:1px solid #314362;transition:background-color .3s;display:flex;justify-content:space-between;align-items:center;list-style:none} 
+.subtask_wrapper {position: relative;}
 .category-item:hover,.note-item:hover{background-color:#304262}
 .category-item.selected,.note-item.selected{background-color:#304262}
 .category-edit-buttons{visibility:hidden;width: 0;background-color:transparent;border:none;cursor:pointer;padding:0;margin-left:0}
@@ -97,35 +124,84 @@ svg.feather.feather-trash{fill:none;stroke:#9ccced;transition:stroke .3s;height:
 button.category-delete-button{float:right;padding-top:9px;background:transparent;}
 .category-edit-buttons:hover svg{stroke:#3498db}
 .category-item span:before,.note-item span:before{content: '';position:absolute;top: calc(50% - 6px);left: 6px;border: solid 3px;border-radius: 50%;width: 6px;height: 6px;}
-.category-item span#renkb1653d:before,.note-item span#renkb1653d:before{border-color:#b1653d;}
-.category-item span#renk9a900b:before,.note-item span#renk9a900b:before{border-color:#9a900b;}
-.category-item span#renk6c8f20:before,.note-item span#renk6c8f20:before{border-color:#6c8f20;}
-.category-item span#renk1490b5:before,.note-item span#renk1490b5:before{border-color:#1490b5;}
-.category-item span#renk1b86f2:before,.note-item span#renk1b86f2:before{border-color:#1b86f2;}
-.category-item span#renk527cf8:before,.note-item span#renk527cf8:before{border-color:#527cf8;}
-.category-item span#renk8772ff:before,.note-item span#renk8772ff:before{border-color:#8772ff;}
-.category-item span#renkb34e99:before,.note-item span#renkb34e99:before{border-color:#b34e99;}
-.category-item span#renkbb4141:before,.note-item span#renkbb4141:before{border-color:#bb4141;}
+.task_date_div span:before,.subtask_list_wrapper span:before{content: '';position:absolute;top:11px;left:6px;border: solid 3px;border-radius: 50%;width: 6px;height: 6px;}
+.category-item span#renkb1653d:before,.note-item span#renkb1653d:before,.task_date_div span#renkb1653d:before,.subtask_list_wrapper span#renkb1653d:before{border-color:#b1653d;}
+.category-item span#renk9a900b:before,.note-item span#renk9a900b:before,.task_date_div span#renk9a900b:before,.subtask_list_wrapper span#renk9a900b:before{border-color:#9a900b;}
+.category-item span#renk6c8f20:before,.note-item span#renk6c8f20:before,.task_date_div span#renk6c8f20:before,.subtask_list_wrapper span#renk6c8f20:before{border-color:#6c8f20;}
+.category-item span#renk1490b5:before,.note-item span#renk1490b5:before,.task_date_div span#renk1490b5:before,.subtask_list_wrapper span#renk1490b5:before{border-color:#1490b5;}
+.category-item span#renk1b86f2:before,.note-item span#renk1b86f2:before,.task_date_div span#renk1b86f2:before,.subtask_list_wrapper span#renk1b86f2:before{border-color:#1b86f2;}
+.category-item span#renk527cf8:before,.note-item span#renk527cf8:before,.task_date_div span#renk527cf8:before,.subtask_list_wrapper span#renk527cf8:before{border-color:#527cf8;}
+.category-item span#renk8772ff:before,.note-item span#renk8772ff:before,.task_date_div span#renk8772ff:before,.subtask_list_wrapper span#renk8772ff:before{border-color:#8772ff;}
+.category-item span#renkb34e99:before,.note-item span#renkb34e99:before,.task_date_div span#renkb34e99:before,.subtask_list_wrapper span#renkb34e99:before{border-color:#b34e99;}
+.category-item span#renkbb4141:before,.note-item span#renkbb4141:before,.task_date_div span#renkbb4141:before,.subtask_list_wrapper span#renkbb4141:before{border-color:#bb4141;}
 .colors{display:flex;justify-content:center;margin-bottom:10px;}
 .color-option{width:16px;height:16px;border-radius:50%;margin:0 5px;cursor:pointer;border:2px solid transparent;}
 .color-option.selected{border:2px solid #84bae1;}
 .toolbar{background: #1f2a3d;display: flow-root;padding:6px 7px;margin-bottom:5px;border-radius: 5px;}
 .toolbar button{position: relative;z-index: 1;background-color:transparent;border:none;padding: 0;
 width: 26px;height: 26px;cursor:pointer;}
-.toolbar button:hover{background-color:#445d77;}
-#add-note-button,#add-category-button { text-align: left;display: block;width: 100%;}
-#add-note-button::before,#add-category-button::before{content: "";position: relative;
-background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24"><path stroke="%23d9d5fa" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" d="M6 12H18M12 6V18"/></svg>');background-repeat: no-repeat;background-position: center;
+.toolbar button:hover{background-color:#445d77;z-index:9;}
+button.alt_gorev_ekle{width: 100%;background:transparent;font-family:'OpenSans';font-size:15px;color:#a2c1f4;margin-bottom:10px;}
+.task_container textarea,#subTaskModalContent textarea{margin-bottom:8px;border:1px solid #415c86;min-width:unset;min-height:55px;width:350px;font-size:15px;}
+#taskModalContent div.task_container input,#subTaskModalContent input{width:350px;margin-bottom: 9px;}
+.task_container textarea::placeholder,#subTaskModalContent textarea::placeholder{color:#a2c1f4;}
+.subtask_wrapper input{margin-left:20px;width:330px!important;}
+.subtask_wrapper textarea{margin-left:20px;width:330px;}
+.note-task .toolbar_hiza, .note-task #editor_div, .note-task #save_date_hiza,.note-task .ust_content {display: none;}
+.task_date_div,.subtask_list_wrapper{position:relative;border:1px solid #364b6d;padding:5px 55px 5px 26px;background-color:#2d3e5b;border-radius:5px;margin-bottom:10px;}
+input[type="date"]{background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='%238ac5ff' stroke='%238ac5ff'%3E%3Cpath d='M3,22H21a1,1,0,0,0,1-1V6a1,1,0,0,0-1-1H17V3a1,1,0,0,0-2,0V5H9V3A1,1,0,0,0,7,3V5H3A1,1,0,0,0,2,6V21A1,1,0,0,0,3,22ZM4,7H20v3H4Zm0,5H20v8H4Z'/%3E%3C/svg%3E");
+background-repeat: no-repeat;background-position: right 9px center;background-size: 16px;font-size: 15px;border: none;outline: none;padding: 5px;border-radius:4px;}
+input[type="date"]::-webkit-calendar-picker-indicator{opacity: 0;}
+.tabs-container{display:inline-block;vertical-align: bottom;margin: 0 10px 0 5px}
+button.tab{position:relative;font-size:15px;border:solid 1px #394f77;border-right: 0;background-color:#2a3a56;margin-right:10px;color:#d9d5fa;padding:6px 13px;cursor:pointer;transition:background-color .3s;margin-top:5px;line-height:20px;margin: 0;}
+button.tab.active-tab{background-color:#384d72;border:solid 1px #3d598a;}
+.tab.active_light::before,.tab.today_light::before,.tab.overdue_light::before,.tab.completed_light::before{content: "";position:absolute;width:4px;height:4px;top:2px;right: 0px;transform:translateX(-50%);background-color:#659400;box-shadow: 0px 0px 3px #659400;border-radius:50%;}
+.tab.today_light::before{background-color:#2797dc;box-shadow: 0px 0px 3px #2797dc;}
+.tab.overdue_light::before{background-color:#a79900;box-shadow: 0px 0px 3px #a79900;}
+.tab.completed_light::before{background-color:#7996b4;box-shadow: 0px 0px 3px #7996b4;}
+button.tab:first-child{border-bottom-left-radius:5px;border-bottom-right-radius:0;border-top-left-radius:5px;border-top-right-radius:0;}
+button.tab:last-child{border-bottom-right-radius:5px;border-top-right-radius:5px;border-bottom-left-radius:0;border-top-left-radius:0;border-right: solid 1px #394f77;}
+.task-list{overflow-x:hidden;max-height: 87%;padding-right:5px;margin-top:15px;}
+.task-list.thiza{display:grid;grid-template-columns:1fr 1fr;gap:0 10px;}
+.task-list.thiza > div{display:grid;}
+.task_div{position:relative;height:calc(100% - 20px);top: -5px;}
+.task_date_div span,.subtask_list_wrapper span{cursor:pointer;}
+.date_span{position:absolute;left:5px;top:50%;transform:translateY(-50%);background:#2d3e5b;width:100px;padding:0 5px;font-size:15px;}
+.subtask_wrapper span.date_span {left: 25px;}
+.subtasks_list_container{display: none;max-height:0;overflow:hidden;opacity:0;transform:translateY(-10px);transition:all 0.3s ease-out;pointer-events:none;}
+.subtasks_list_container.show{max-height:max-content;opacity:1;transform:translateY(0);pointer-events:auto;}
+.togglediv{display:inline-block;user-select: none;cursor:pointer;position:relative;vertical-align:12px;margin-left:8px;}
+.task_date_div .togglediv::after{transition:transform 0.3s ease;left:0;transform:rotate(90deg);background-size:14px;width:14px;height:14px;}
+.togglediv.active::after{transform:rotate(270deg);}
+.subtask_list_wrapper {margin-left: 15px;}
+.date_div{font-size:15px;color:#71bcff;display: inline-block;}
+button.gorev_ekle {padding: 6px 8px;}
+.task_div .gorev_ekle::before{left:0;}
+.edit_delete_div,.sub_edit_delete_div{position:absolute;right:10px;top: 8px;}
+button.delete-subtask-button-modal{position:absolute;left:-6px;padding-top:5px;}
+.edit-task-button,.delete-task-button,.edit-subtask-button,.delete-subtask-button,.delete-subtask-button-modal{margin-left: 6px;background:transparent;width:16px;height:16px;display:inline-block;padding:0;}
+button.thiza_button {width: 21px;height: 21px;background:transparent;float: right;margin-right: 10px;
+background-image: url('data:image/svg+xml;utf8,<svg width="7.40mm" height="6.35mm" viewBox="0 0 7.40 6.35" version="1.1" xmlns="http://www.w3.org/2000/svg"><defs/><g transform="translate(-101.41381,-145.32499)"><g style="fill:%23b1cee7" transform="matrix(0.26458333,0,0,0.26458333,100.88464,144.26667)"><path d="M 28,4 H 4 C 2.8954305,4 2,4.8954305 2,6 v 20 c 0,1.104569 0.8954305,2 2,2 h 24 c 1.104569,0 2,-0.895431 2,-2 V 6 C 30,4.8954305 29.104569,4 28,4 Z M 4,6 H 15.009062 V 26 H 4 Z M 28,26 H 17.009062 V 6 H 28 Z"/></g></g></svg>');background-repeat: no-repeat;background-position: center;display: inline-block;background-size: 21px;
+}
+.edit-task-button::before,.edit-subtask-button::before{content: "";position: relative;background-image: url('data:image/svg+xml;utf8,<svg fill="none" width="24" height="24" stroke="%238ac5ff" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M11 4H4a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-7"></path><path d="M18.5 2.5a2.121 2.121 0 0 1 3 3L12 15l-4 1 1-4 9.5-9.5z"></path></svg>');background-repeat: no-repeat;background-position: center;
+width: 16px;height: 16px;left: 0px;display: inline-block;background-size: 16px;}
+.delete-task-button::before,.delete-subtask-button::before,.delete-subtask-button-modal::before{content: "";position: relative;background-image: url('data:image/svg+xml;utf8,<svg fill="none" width="24" height="24" stroke="%238ac5ff" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M3 6h18"></path><path d="M19 6v14a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2V6m3 0V4a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v2"></path><line x1="10" x2="10" y1="11" y2="17"></line><line x1="14" x2="14" y1="11" y2="17"></line></svg>');background-repeat: no-repeat;background-position: center;
+width: 18px;height: 18px;left: 0px;display: inline-block;background-size: 18px;}
+
+#add-note-button::before,#add-category-button::before,#add-task-button::before,.alt_gorev_ekle::before,.gorev_ekle::before{content: "";position: relative;background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24"><path stroke="%23d9d5fa" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" d="M6 12H18M12 6V18"/></svg>');background-repeat: no-repeat;background-position: center;
 width: 16px;height: 10px;left: -4px;display: inline-block;background-size: 18px;}
-#add-category-button,#add-note-button,#save-note-button,#delete-note-button,#confirmDelete,#cancelDelete,.close_main_modal,.delete-confirm,.delete-cancel{font-size: 15px;border: solid 1px #726ee1;background-color:#5854cd;margin-right: 5px;color:#d9d5fa;padding:6px 12px;cursor:pointer;transition:background-color .3s;margin-top:5px;line-height: 20px;border-radius:5px}
-#add-note-button, #save-note-button,#confirmDelete,.delete-confirm{background-color: #276ba8;border: solid 1px #2c84d2;}
-#add-note-button:hover, #save-note-button:hover{background-color: #287ec0;} 
+#add-category-button,#add-note-button,#add-task-button,#save-note-button,#delete-note-button,#confirmDelete,#cancelDelete,.close_main_modal,.delete-confirm,.delete-cancel,.gorev_ekle,.delete-all-completed-button{font-size: 15px;border: solid 1px #726ee1;background-color:#5854cd;margin-right: 5px;color:#d9d5fa;padding:6px 12px;cursor:pointer;transition:background-color .3s;margin-top:5px;line-height: 20px;border-radius:5px}
+#add-note-button, #save-note-button,#confirmDelete,.delete-confirm,.gorev_ekle{background-color: #276ba8;border: solid 1px #2c84d2;}
+#add-note-button{width:50%;margin-right:9px;text-align: left;}
+#add-task-button{margin-right:0px;width:50%;text-align: left;}
+#add-category-button{ text-align: left;display: block;width: 100%;}
+.not_gorev{display:flex;}
+#add-note-button:hover,.gorev_ekle:hover, #save-note-button:hover{background-color: #287ec0;} 
 #cancelDelete,.close_main_modal,.delete-cancel {background-color: #1f2a3d;border: solid 1px #1f2a3d;}
-#delete-note-button{background-color: #1f2a3d;border: solid 1px #3b64a9;}
-#delete-note-button:hover,#cancelDelete:hover,.close_main_modal:hover,.delete-cancel:hover{background-color: #28364e;}
-#add-category-button:hover{background-color:#645fe5}
-input#note-content-search{background-color:#364b6d;font-size: 15px;}
-input#note-search {background-color: #304262;font-size: 15px;}
+#delete-note-button,.delete-all-completed-button{background-color: #1f2a3d;border: solid 1px #3b64a9;}
+#delete-note-button:hover,.delete-all-completed-button:hover,#cancelDelete:hover,.close_main_modal:hover,.delete-cancel:hover{background-color: #28364e;}
+#add-category-button:hover,#add-task-button:hover{background-color:#645fe5}
+input#note-search,input#note-content-search{background-color: #304262;font-size: 15px;}
 input,textarea{width:100%;font-size: 16px;border: 1px solid #364b6d;box-sizing: border-box;background-color:#2d3e5b;color:#a2c1f4;padding:6px 8px;margin-bottom:15px;border-radius:5px}
 textarea{border:1px solid #415c86;min-width:350px;min-height:130px;display:block;}
 input::-webkit-input-placeholder{color:#87a0ca}
@@ -143,7 +219,7 @@ h2,div#note-editor h2 {font-size: 18px;color: #a9c8f6;}
 button#import{margin-right:13px;}
 button{cursor: pointer;}
 #save-note-button, #delete-note-button {display: inline-block;}
-.toolbar button::before,.toolbar #omod_toggle::before,.settool button::before{content: "";position:absolute;top:33px;left:50%;transform:translateX(-50%);background-color:#1f2a3d;color:#a2c1f4;border:solid 1px #366691;padding:7px 8px;border-radius:5px;white-space:nowrap;opacity:0;transition:opacity 0.3s ease;pointer-events:none;font-size: 13px;}
+.toolbar button::before,#omod_toggle::before,.settool button::before{content: "";position:absolute;top:33px;left:50%;transform:translateX(-50%);background-color:#1f2a3d;color:#a2c1f4;border:solid 1px #366691;padding:7px 8px;border-radius:5px;white-space:nowrap;opacity:0;transition:opacity 0.3s ease;pointer-events:none;font-size: 13px;}
 .toolbar button:hover::before,.toolbar #omod_toggle:hover::before,.settool button:hover::before {opacity: 1;}
 #omod_toggle{background-image:url('data:image/svg+xml;utf8,<?xml version="1.0" encoding="utf-8"?><svg width="171.34921mm" height="120.95208mm" viewBox="0 0 171.34921 120.95208" version="1.1" id="svg1" xml:space="preserve" xmlns="http://www.w3.org/2000/svg" xmlns:svg="http://www.w3.org/2000/svg"><defs id="defs1" /><g fill="none" fill-rule="evenodd" stroke="%23a2c1f4" stroke-linecap="round" stroke-linejoin="round" transform="matrix(10.079365,0,0,10.079365,-8.1167208e-8,5.559072e-6)" id="g3"><path id="path3" d="M 8.5,1.5909091 C 7.1666667,0.86363636 5.8333333,0.5 4.5,0.5 3.1666667,0.5 1.8333333,0.86363636 0.5,1.5909091 V 11.5 c 1.3333333,-0.666667 2.6666667,-1 4,-1 1.3333333,0 2.6666667,0.333333 4,1 z m 6.055927,1.1972841 C 13.870618,2.5960644 13.185309,2.5 12.5,2.5 c -0.685309,0 -1.370618,0.096064 -2.055926,0.2881932 m 4.111853,2 C 13.870618,4.5960644 13.185309,4.5 12.5,4.5 c -0.685309,0 -1.370618,0.096064 -2.055926,0.2881932 m 4.111853,2 C 13.870618,6.5960644 13.185309,6.5 12.5,6.5 c -0.685309,0 -1.370618,0.096064 -2.055926,0.2881932 m 4.111853,2 C 13.870618,8.5960644 13.185309,8.5 12.5,8.5 11.814691,8.5 11.129382,8.596064 10.444074,8.7881932 M 16.5,1.5909091 C 15.166667,0.86363636 13.833333,0.5 12.5,0.5 11.166667,0.5 9.8333333,0.86363636 8.5,1.5909091 V 11.5 c 1.3333333,-0.666667 2.666667,-1 4,-1 1.333333,0 2.666667,0.333333 4,1 z" /></g></svg>');background-repeat: no-repeat;background-position: center;background-size: 25px;color: transparent;width: 25px;position: relative;height: 25px;top: 1px;right: 5px;z-index: 1;float: right;cursor: pointer;}
 .kucult-button{background-image:url('data:image/svg+xml;utf8,<?xml version="1.0" encoding="utf-8"?><svg width="24px" height="24px" viewBox="-3 -2 24 24" xmlns="http://www.w3.org/2000/svg" fill="none"><path fill="%23a2c1f4" fill-rule="evenodd" d="M9 4a5 5 0 100 10A5 5 0 009 4zM2 9a7 7 0 1112.6 4.2.999.999 0 01.107.093l3 3a1 1 0 01-1.414 1.414l-3-3a.999.999 0 01-.093-.107A7 7 0 012 9zm10.5 0a1 1 0 00-1-1h-5a1 1 0 100 2h5a1 1 0 001-1z"/></svg>');background-repeat: no-repeat;background-position: center;background-size: 25px;color: transparent;width: 25px;}
@@ -182,19 +258,19 @@ background-size: 24px;position:relative;background-repeat: no-repeat;background-
 opacity: .35;filter: sepia(1) hue-rotate(173deg) saturate(1.5);-webkit-filter: sepia(1) hue-rotate(173deg) saturate(1.5);position: absolute;top: 0;left: 0;}
 .tooltip {position: absolute;top: -52px;opacity: 0;visibility: hidden;background-color: #1f2a3d;color: #ccdefa;padding: 10px 8px;border-radius: 4px;left: 0;font-size: 14px;border-radius: 4px;white-space: nowrap;pointer-events: none;z-index: 1000;}
 .modal{position:fixed;top:0;left:0;width:100%;height:100%;user-select: none;background-color:rgba(0,0,0,0.5);display:flex;justify-content:center;align-items:baseline;z-index:99999;}
-.modal-content,.modal_dil-content{background-color:#34496c;padding:20px;border-radius:5px;top:100px;position:relative;}
+.modal-content,.modal_dil-content{background-color:#34496c;padding:20px;border-radius:5px;top:60px;position:relative;overflow-x:hidden;max-height:450px;}
 .modal-content p,.modal_dil-content p{margin-top:0;} 
 .modal-content input {border: 1px solid #405982;width: 270px;display: block;}
 .modal-content label {position: relative;bottom: 8px;}
-.modal_dil-content2{background-color:#34496c;padding:15px;border-radius:5px;top:100px;position:relative;display:grid;grid-auto-flow: column;grid-template-rows: repeat(5, auto);}
+.modal_dil-content2{background-color:#34496c;padding:15px;border-radius:5px;top:60px;position:relative;display:grid;grid-auto-flow: column;grid-template-rows: repeat(5, auto);}
 .gecerli_dil{color: #6bb5ff;position: relative;padding-left: 23px;margin-bottom:7px;border-bottom:solid 2px #556d95;padding-bottom:7px;min-width:200px;}
 .gecerli_dil:before{content: '';width:10px;height:4px;top:6px;left:0;border-left:2px solid #6bb5ff;border-bottom:2px solid #6bb5ff;position:absolute;-webkit-transform:rotate(-45deg);transform:rotate(-45deg);}
 .dili_degistir{margin-bottom:5px;position: relative;cursor: pointer;}
-#arrow:after{content: '';background-image: url("data:image/svg+xml;utf8,<svg version='1.1' xmlns='http://www.w3.org/2000/svg' width='18' height='18' viewBox='0 0 18 18' xml:space='preserve' style='vertical-align: middle;' id='left_arrow'><g><line x1='5.8' y1='2.6' x2='12.2' y2='9' style='fill: none; stroke: %23a2c1f4; stroke-width: 2; stroke-linecap: round; stroke-linejoin: round; stroke-miterlimit: 10;'/><line x1='5.8' y1='15.4' x2='12.2' y2='9' style='fill: none; stroke: %23a2c1f4; stroke-width: 2; stroke-linecap: round; stroke-linejoin: round; stroke-miterlimit: 10;'/></g></svg>");
+#arrow:after,.togglediv:after{content: '';background-image: url("data:image/svg+xml;utf8,<svg version='1.1' xmlns='http://www.w3.org/2000/svg' width='18' height='18' viewBox='0 0 18 18' xml:space='preserve' style='vertical-align: middle;' id='left_arrow'><g><line x1='5.8' y1='2.6' x2='12.2' y2='9' style='fill: none; stroke: %23a2c1f4; stroke-width: 2; stroke-linecap: round; stroke-linejoin: round; stroke-miterlimit: 10;'/><line x1='5.8' y1='15.4' x2='12.2' y2='9' style='fill: none; stroke: %23a2c1f4; stroke-width: 2; stroke-linecap: round; stroke-linejoin: round; stroke-miterlimit: 10;'/></g></svg>");
 background-repeat: no-repeat;background-position: center;background-size: 20px;color: transparent;width: 20px;height:25px;position: absolute;right: 0;}
-div#arrow.geriNotebar,div#arrow.geriContent{padding-left: 23px;margin-bottom: 12px;position: relative;cursor: pointer;width: fit-content;}
-div#arrow.geriNotebar:after,div#arrow.geriContent:after {transform: rotate(180deg);left: 0;}
-div#arrow.geriNotebar:lang(ar), div#arrow.geriContent:lang(ar),div#arrow.geriNotebar:lang(fa), div#arrow.geriContent:lang(fa) {font-size: 20px;line-height: 18px;}
+div#arrow.geriNotebar,div#arrow.geriTask,div#arrow.geriContent{padding-left: 23px;margin-bottom: 12px;position: relative;cursor: pointer;width: fit-content;font-size: 16px;}
+div#arrow.geriNotebar:after,div#arrow.geriTask:after,div#arrow.geriContent:after {transform: rotate(180deg);left: 0;}
+div#arrow.geriNotebar:lang(ar),div#arrow.geriTask:lang(ar), div#arrow.geriContent:lang(ar),div#arrow.geriNotebar:lang(fa),div#arrow.geriTask:lang(fa), div#arrow.geriContent:lang(fa) {font-size: 20px;line-height: 18px;}
 .omod div#arrow.geriContent{display:none}
 .checkbox-design input:checked ~ .checkbox-square:before{content: '';width:10px;height:4px;top:0;left:0;border-left:2px solid #6bb5ff;border-bottom:2px solid #6bb5ff;position:absolute;-webkit-transform:rotate(-45deg);transform:rotate(-45deg);}
 .checkbox-design{cursor: pointer;font-weight:normal;position:relative;display:inline-block;padding-left:22px;padding-right:13px;margin-bottom:7px;}
@@ -215,16 +291,20 @@ tr th{border-top:none;color: #9bbbf0;background-color:#1f2a3d;font-weight: 100;}
 .omod .rich-text-editor {caret-color: transparent;max-height: max-content;height: calc(100% - 35px);    pointer-events: auto;}
 .omod input#note-title{position:absolute;z-index: 9;top:4px;left:0;background-color:transparent;border:0;padding-left:16px;pointer-events:none;}
 .omod .toolbar button,.omod .notebar,.omod .sidebar,.omod #toggle-sidebar-button,.omod #save-status,.omod #save-note-button,.omod #delete-note-button{display: none!important;}
-body.light {color:#9bbdf5;filter: invert(1) hue-rotate(180deg) brightness(1.1) saturate(1.2);-webkit-filter: invert(1) hue-rotate(180deg) brightness(1.1) saturate(1.2);background-color:transparent;}
+body.light {filter: invert(1) hue-rotate(180deg) brightness(1.1) saturate(1.2);-webkit-filter: invert(1) hue-rotate(180deg) brightness(1.1) saturate(1.2);background-color:transparent;color:#9bbdf5}
 .light .logo {filter: invert(0) hue-rotate(18deg) brightness(1.3) saturate(1);-webkit-filter: invert(0) hue-rotate(18deg) brightness(1.3) saturate(1);}
-.light .sidebar.initialized,.light .notebar,.light .settool,.light #editor_div,.light .toolbar{background-color: #182130;}
-.light input#note-content-search,.light input#note-search,.light input,.light textarea{background-color: #1c2638;}
+.light .sidebar.initialized,.light .notebar,.light button.tab.active-tab,.light .settool,.light #editor_div,.light .toolbar,.light .task_date_div,.light .subtask_list_wrapper{background-color: #182130;}
+.light input#note-content-search,.light input#note-search,.light .date_span,.light input,.light textarea{background-color: #1c2638;}
 .light .category-item.selected, .light .note-item.selected,.light .category-item:hover,.light .note-item:hover{background-color: #243148;}
+.light .placeholder {background: #2c3b56;}
+.light .dragging {background-color: #101620;}
+.light button.tab,.light .delete-all-completed-button,.light input,.light textarea {color: currentColor;}
 .light .modal-content,.light .modal_dil-content,.light .modal_dil-content2{background-color:#101721;border:solid 1px #3e567b;}
 .light .modal{background-color:rgb(255 255 255 / 64%);}
-.light #add-category-button, .light #add-note-button, .light #save-note-button, .light #delete-note-button, .light #confirmDelete, .light #cancelDelete, .light .close_main_modal, .light .delete-confirm, .light .delete-cancel {background-color: #7a75fe;color: #000000;}
-.light #add-note-button::before, .light #add-category-button::before {content: "";filter: invert(1) hue-rotate(180deg) brightness(0.5) saturate(1.2);-webkit-filter: invert(1) hue-rotate(180deg) brightness(0.5) saturate(1.2);}
-.light #add-note-button,.light #save-note-button,.light #confirmDelete,.light .delete-confirm{background-color:#2f86d3;}
+.light #add-category-button,.light #save-note-button,.light #add-task-button, .light #add-note-button,.light .gorev_ekle .light #save-note-button, .light #delete-note-button, .light #confirmDelete, .light #cancelDelete, .light .close_main_modal, .light .delete-confirm, .light .delete-cancel {background-color: #7a75fe;color: #000000;}
+.light #add-note-button::before,.light #add-task-button::before,.light .gorev_ekle::before, .light #add-category-button::before {content: "";filter: invert(1) hue-rotate(180deg) brightness(0.5) saturate(1.2);-webkit-filter: invert(1) hue-rotate(180deg) brightness(0.5) saturate(1.2);}
+.light #add-note-button,.light #save-note-button,.light #confirmDelete,.light .delete-confirm,.light .gorev_ekle{background-color:#2f86d3;}
+.light button.tab {background-color: #24334c;}
 .light .note-content,.light .note-content-ic {background-color: #1d283b;}
 .light .tooltip, .light .toolbar button::before, .light .toolbar #omod_toggle::before, .light .settool button::before {background-color: #6b91d1;color: #000000;}
 .light table{border-top: 1px solid #3d5b85;}
@@ -232,12 +312,17 @@ body.light {color:#9bbdf5;filter: invert(1) hue-rotate(180deg) brightness(1.1) s
 .light .color-option, .light .category-item span:before, .light .note-item span:before {filter: invert(1) hue-rotate(180deg) brightness(0.9) saturate(1);-webkit-filter: invert(1) hue-rotate(180deg) brightness(0.9) saturate(1);}
 .light .arkaplan{filter: sepia(1) hue-rotate(173deg) saturate(1.5);-webkit-filter: sepia(1) hue-rotate(173deg) saturate(1.5);}
 @media screen and (min-width:1000px){
-div#arrow.geriNotebar,div#arrow.geriContent{display: none;}
+div#arrow.geriNotebar,div#arrow.geriTask,div#arrow.geriContent{display: none;}
 }
 @media screen and (max-width:1220px){
-#omod_toggle {float: unset; display: inline-block;margin-left: 10px;}
+div#omod_toggle::before,div#omod_toggle:lang(ar)::before,div#omod_toggle:lang(fa)::before{left:50%;right:auto;transform:translateX(-50%);}
+#omod_toggle:not(.omod #omod_toggle),div#omod_toggle:not(.omod #omod_toggle):lang(ar), div#omod_toggle:not(.omod #omod_toggle):lang(fa){float: unset;right: auto;display: inline-block;margin-left: 10px;}
 }
 @media screen and (max-width:1000px){
+.task_list_container,.subtask_list_wrapper{touch-action:none;}
+.toolbar button::before,#omod_toggle::before{height: 0;display: none;}
+.modal-content input {width: 100%;}
+button.thiza_button:lang(ar), button.thiza_button:lang(fa) {float: right;}
 .sidebar.initialized.collapsed {left: 0;}
 .sidebar.initialized.collapsed + .notebar {margin-left:0;}
 .category-edit-buttons{visibility:visible;width:auto;margin-right:8px;margin-left: 8px;}
@@ -250,6 +335,19 @@ input#note-content-search,input#note-search{display: none;}
 .toolbar button {margin:2px;}
 }
 @media screen and (max-width:450px){
+.logo {background-size: 137px;margin: 5px 0 5px 0;}
+button.delete-all-completed-button {top: 5px;position: relative;width: 100%;}
+.modal-content, .modal_dil-content {top: 35px;}
+button.thiza_button{display: none;}
+.task-list.thiza {grid-template-columns: 1fr;}
+div#arrow.geriTask{width:48px;display:inline-block;vertical-align:bottom;margin-bottom:20px;}
+div#arrow.geriTask + button.gorev_ekle{vertical-align:20px;margin-top:0;}
+.modal-content,.modal_dil-content,#taskModalContent div.task_container input,#subTaskModalContent input,.task_container textarea,#subTaskModalContent textarea{width:99%;}
+.subtask_wrapper textarea,.subtask_wrapper input{width:93%!important;}
+.modal-content,.modal_dil-content{padding:12px 8px;margin: 0 10px;}
+button.delete-subtask-button-modal{left:0px;}
+.tabs-container {display: flex;margin: 0;clear: both;width: 100%;}
+button.tab{padding: 6px 8px;width: 100%;}
 .tooltip{opacity: 0!important;visibility: hidden!important;}
 .category-item span,.note-item span{white-space:normal;line-height:25px;text-overflow:unset;}
 .omod .toolbar{width:auto;}
@@ -257,7 +355,7 @@ input#note-content-search,input#note-search{display: none;}
 .toolbar button{margin:4px;}
 .toolbar_hiza{overflow-x:auto;width:100%;display:block;position:absolute;scrollbar-width:none;}
 .toolbar{background:#1f2a3d;display:block;padding:6px 7px;margin-bottom:5px;border-radius:5px;position:relative;width:max-content;scrollbar-width:none;top:0;overflow-x:auto;}
-.modal_dil-content2 {grid-template-rows: repeat(7, auto);}
+.modal_dil-content2 {grid-template-rows: repeat(10, auto);}
 }
 </style>
 </head>
@@ -277,7 +375,10 @@ input#note-content-search,input#note-search{display: none;}
 <div class="resizer"></div>
 <div id="arrow" class="geriNotebar">Geri</div>
 <input type="text" id="note-content-search" style="margin-bottom: 10px;"/>
+<div class="not_gorev">
 <button id="add-note-button"></button>
+<button id="add-task-button"></button>
+</div>
 <ul id="note-list" class="sortable2"></ul>
 </div>
 <div class="note-content">
@@ -318,8 +419,8 @@ input#note-content-search,input#note-search{display: none;}
 </div>
 <div id="editor_div"><div id="note-editor" class="rich-text-editor" contenteditable="true"></div></div>
 <div id="save_date_hiza">
-<div id="note-created-date"></div>
 <p id="save-status"></p>
+<div id="note-created-date"></div>
 <div id="save-note-button"></div>
 <div id="delete-note-button"></div>
 </div>
@@ -338,7 +439,9 @@ add:{AR:"إضافة",DE:"Hinzufügen",EN:"Add",ES:"Agregar",FA:"اضافه کر�
 cancel:{AR:"إلغاء",DE:"Abbrechen",EN:"Cancel",ES:"Cancelar",FA:"لغو",FR:"Annuler",HI:"रद्द करें",ID:"Batal",IT:"Annulla",JA:"キャンセル",KO:"취소",SW:"Ghairi",PL:"Anuluj",PT:"Cancelar",RU:"Отмена",VI:"Hủy",TR:"İptal",UR:"منسوخ کریں",UZ:"Bekor qilish",ZH:"取消"},
 cat_name_empty:{AR:"اسم الفئة لا يمكن أن يكون فارغًا!",DE:"Kategoriename darf nicht leer sein!",EN:"Category name cannot be empty!",ES:"¡El nombre de la categoría no puede estar vacío!",FA:"نام دسته بندی نمی تواند خالی باشد!",FR:"Le nom de la catégorie ne peut pas être vide!",HI:"श्रेणी का नाम खाली नहीं हो सकता!",ID:"Nama kategori tidak boleh kosong!",IT:"Il nome della categoria non può essere vuoto!",JA:"カテゴリ名は空にできません！",KO:"카테고리 이름은 비어 있을 수 없습니다!",SW:"Jina la jamii halitakiwi kuwa tupu!",PL:"Nazwa kategorii nie może być pusta!",PT:"O nome da categoria não pode estar vazio!",RU:"Название категории не может быть пустым!",VI:"Tên danh mục không thể để trống!",TR:"Kategori adı boş olamaz!",UR:"زمرے کا نام خالی نہیں ہو سکتا!",UZ:"Kategoriya nomi bo'sh bo'lishi mumkin emas!",ZH:"类别名称不能为空！"},
 note_title:{AR:"عنوان الملاحظة:",DE:"Notizentitel:",EN:"Note Title:",ES:"Título de la nota:",FA:"عنوان یادداشت:",FR:"Titre de la note:",HI:"नोट का शीर्षक:",ID:"Judul Catatan:",IT:"Titolo della nota:",JA:"ノートのタイトル:",KO:"노트 제목:",SW:"Kichwa cha Kumbukumbu:",PL:"Tytuł notatki:",PT:"Título da nota:",RU:"Заголовок заметки:",VI:"Tiêu đề ghi chú:",TR:"Not Başlığı:",UR:"نوٹ کا عنوان:",UZ:"Eslatma sarlavhasi:",ZH:"笔记标题:"},
+task_title: {AR:"عنوان المهمة:",DE:"Aufgabentitel:",EN:"Task Title:",ES:"Título de la tarea:",FA:"عنوان وظیفه:",FR:"Titre de la tâche:",HI:"कार्य का शीर्षक:",ID:"Judul Tugas:",IT:"Titolo del compito:",JA:"タスクタイトル:",KO:"작업 제목:",SW:"Kichwa cha Kazi:",PL:"Tytuł zadania:",PT:"Título da tarefa:",RU:"Название задачи:",VI:"Tiêu đề nhiệm vụ:",TR:"Görev Başlığı:",UR:"کام کا عنوان:",UZ:"Vazifa sarlavhasi:",ZH:"任务标题:"},
 note_title_empty:{AR:"عنوان الملاحظة لا يمكن أن يكون فارغًا!",DE:"Notizentitel darf nicht leer sein!",EN:"Note title cannot be empty!",ES:"¡El título de la nota no puede estar vacío!",FA:"عنوان یادداشت نمی تواند خالی باشد!",FR:"Le titre de la note ne peut pas être vide!",HI:"नोट का शीर्षक खाली नहीं हो सकता!",ID:"Judul catatan tidak boleh kosong!",IT:"Il titolo della nota non può essere vuoto!",JA:"ノートのタイトルは空にできません！",KO:"노트 제목은 비어 있을 수 없습니다!",SW:"Kichwa cha kumbukumbu halitakiwi kuwa tupu!",PL:"Tytuł notatki nie może być pusty!",PT:"O título da nota não pode estar vazio!",RU:"Заголовок заметки не может быть пустым!",VI:"Tiêu đề ghi chú không thể để trống!",TR:"Not başlığı boş olamaz!",UR:"نوٹ کا عنوان خالی نہیں ہو سکتا!",UZ:"Eslatma sarlavhasi bo'sh bo'lishi mumkin emas!",ZH:"笔记标题不能为空！"},
+task_title_cannot_be_empty: {AR:"عنوان المهمة لا يمكن أن يكون فارغًا!",DE:"Der Aufgabentitel darf nicht leer sein!",EN:"Task title cannot be empty!",ES:"¡El título de la tarea no puede estar vacío!",FA:"عنوان وظیفه نمی‌تواند خالی باشد!",FR:"Le titre de la tâche ne peut pas être vide!",HI:"कार्य का शीर्षक खाली नहीं हो सकता!",ID:"Judul tugas tidak boleh kosong!",IT:"Il titolo del compito non può essere vuoto!",JA:"タスクのタイトルは空にできません！",KO:"작업 제목은 비어 있을 수 없습니다!",SW:"Kichwa cha kazi halitakiwi kuwa tupu!",PL:"Tytuł zadania nie może być pusty!",PT:"O título da tarefa não pode estar vazio!",RU:"Название задачи не может быть пустым!",VI:"Tiêu đề nhiệm vụ không thể để trống!",TR:"Görev başlığı boş olamaz!",UR:"کام کا عنوان خالی نہیں ہو سکتا!",UZ:"Vazifa sarlavhasi bo'sh bo'lishi mumkin emas!",ZH:"任务标题不能为空！"},
 please_add_category_first:{AR:"يرجى إضافة فئة أولاً",DE:"Bitte fügen Sie zuerst eine Kategorie hinzu",EN:"Please add a category first",ES:"Por favor, añade una categoría primero",FA:"لطفاً ابتدا یک دسته بندی اضافه کنید",FR:"Veuillez d'abord ajouter une catégorie",HI:"कृपया पहले एक श्रेणी जोड़ें",ID:"Silakan tambahkan kategori terlebih dahulu",IT:"Si prega di aggiungere prima una categoria",JA:"まずカテゴリーを追加してください",KO:"먼저 카테고리를 추가해 주세요",SW:"Tafadhali ongeza jamii kwanza",PL:"Proszę najpierw dodać kategorię",PT:"Por favor, adicione uma categoria primeiro",RU:"Пожалуйста, сначала добавьте категорию",VI:"Vui lòng thêm danh mục trước",TR:"Lütfen önce bir Kategori Ekleyin",UR:"براہ کرم پہلے ایک زمرہ شامل کریں",UZ:"Iltimos, avval kategoriya qo'shing",ZH:"请先添加一个分类"},
 are_you_sure_delete_note:{AR:"هل أنت متأكد أنك تريد حذف هذه الملاحظة؟",DE:"Sind Sie sicher, dass Sie diese Notiz löschen möchten?",EN:"Are you sure you want to delete this note?",ES:"¿Estás seguro de que quieres eliminar esta nota?",FA:"آیا مطمئنید که می‌خواهید این یادداشت را حذف کنید؟",FR:"Êtes-vous sûr de vouloir supprimer cette note ?",HI:"क्या आप वाकई इस नोट को हटाना चाहते हैं?",ID:"Apakah Anda yakin ingin menghapus catatan ini?",IT:"Sei sicuro di voler eliminare questa nota?",JA:"このノートを削除してもよろしいですか？",KO:"이 노트를 삭제하시겠습니까?",SW:"Je, una uhakika unataka kufuta kumbukumbu hii?",PL:"Czy na pewno chcesz usunąć tę notatkę?",PT:"Tem certeza de que deseja excluir esta nota?",RU:"Вы уверены, что хотите удалить эту заметку?",VI:"Bạn có chắc chắn muốn xóa ghi chú này không?",TR:"Bu notu silmek istediğinizden emin misiniz?",UR:"کیا آپ واقعی طور پر اس نوٹ کو حذف کرنا چاہتے ہیں؟",UZ:"Bu eslatmani o'chirishni xohlaysizmi?",ZH:"你确定要删除这个笔记吗？"},
 delete:{AR:"حذف",DE:"Löschen",EN:"Delete",ES:"Eliminar",FA:"حذف",FR:"Supprimer",HI:"हटाएं",ID:"Hapus",IT:"Elimina",JA:"削除",KO:"삭제",SW:"Futa",PL:"Usuń",PT:"Excluir",RU:"Удалить",VI:"Xóa",TR:"Sil",UR:"حذف کریں",UZ:"O'chirish",ZH:"删除"},
@@ -353,8 +456,8 @@ please_select_text_first:{AR:"يرجى تحديد النص أولاً.",DE:"Bitt
 add_link:{AR:"إضافة رابط:",DE:"Link hinzufügen:",EN:"Add Link:",ES:"Agregar enlace:",FA:"افزودن لینک:",FR:"Ajouter un lien:",HI:"लिंक जोड़ें:",ID:"Tambahkan tautan:",IT:"Aggiungi link:",JA:"リンクを追加:",KO:"링크 추가:",SW:"Ongeza kiungo:",PL:"Dodaj link:",PT:"Adicionar link:",RU:"Добавить ссылку:",VI:"Thêm liên kết:",TR:"Bağlantı Ekle:",UR:"لنک شامل کریں:",UZ:"Havola qo'shish:",ZH:"添加链接:"},
 data_imported_successfully:{AR:"تم استيراد البيانات بنجاح.",DE:"Daten wurden erfolgreich importiert.",EN:"Data imported successfully.",ES:"Datos importados con éxito.",FA:"داده‌ها با موفقیت وارد شدند.",FR:"Données importées avec succès.",HI:"डेटा सफलतापूर्वक आयात किया गया।",ID:"Data berhasil diimpor.",IT:"Dati importati con successo.",JA:"データが正常にインポートされました。",KO:"데이터가 성공적으로 가져와졌습니다.",SW:"Data zilifanikiwa kuingizwa.",PL:"Dane zostały pomyślnie zaimportowane.",PT:"Dados importados com sucesso.",RU:"Данные успешно импортированы.",VI:"Dữ liệu đã được nhập thành công.",TR:"Veriler başarıyla içe aktarıldı.",UR:"ڈیٹا کامیابی سے درآمد کیا گیا۔",UZ:"Ma'lumotlar muvaffaqiyatli ravishda import qilindi.",ZH:"数据导入成功。"},
 invalid_file_format:{AR:"تنسيق ملف غير صالح.",DE:"Ungültiges Dateiformat.",EN:"Invalid file format.",ES:"Formato de archivo no válido.",FA:"فرمت فایل نامعتبر است.",FR:"Format de fichier non valide.",HI:"अमान्य फ़ाइल प्रारूप.",ID:"Format file tidak valid.",IT:"Formato file non valido.",JA:"無効なファイル形式です。",KO:"잘못된 파일 형식입니다.",SW:"Muundo wa faili si sahihi.",PL:"Nieprawidłowy format pliku.",PT:"Formato de arquivo inválido.",RU:"Неверный формат файла.",VI:"Định dạng tệp không hợp lệ.",TR:"Geçersiz dosya formatı.",UR:"غلط فائل فارمیٹ۔",UZ:"Noto'g'ri fayl formati.",ZH:"无效的文件格式。"},
-new_category:{AR:"فئة جديدة",DE:"Neue Kategorie",EN:"New Category",ES:"Nueva Categoría",FA:"دسته بندی جدید",FR:"Nouvelle Catégorie",HI:"नई श्रेणी",ID:"Kategori Baru",IT:"Nuova Categoria",JA:"新しいカテゴリ",KO:"새로운 카테고리",SW:"Jamii Mpya",PL:"Nowa Kategoria",PT:"Nova Categoria",RU:"Новая категория",VI:"Danh mục mới",TR:"Yeni Kategori",UR:"نئی زمرہ",UZ:"Yangi kategoriya",ZH:"新分类"},
-new_note:{AR:"ملاحظة جديدة",DE:"Neue Notiz",EN:"New Note",ES:"Nueva Nota",FA:"یادداشت جدید",FR:"Nouvelle Note",HI:"नया नोट",ID:"Catatan Baru",IT:"Nuova Nota",JA:"新しいノート",KO:"새로운 노트",SW:"Kumbukumbu Mpya",PL:"Nowa Notatka",PT:"Nova Nota",RU:"Новая заметка",VI:"Ghi chú mới",TR:"Yeni Not",UR:"نیا نوٹ",UZ:"Yangi eslatma",ZH:"新笔记"},
+category: {AR:"الفئة",DE:"Kategorie",EN:"Category",ES:"Categoría",FA:"دسته",FR:"Catégorie",HI:"श्रेणी",ID:"Kategori",IT:"Categoria",JA:"カテゴリ",KO:"카테고리",SW:"Jamii",PL:"Kategoria",PT:"Categoria",RU:"Категория",VI:"Danh mục",TR:"Kategori",UR:"زمرہ",UZ:"Kategoriya",ZH:"分类"},
+task: {AR:"مهمة",DE:"Aufgabe",EN:"Task",ES:"Tarea",FA:"وظیفه",FR:"Tâche",HI:"कार्य",ID:"Tugas",IT:"Compito",JA:"タスク",KO:"작업",SW:"Kazi",PL:"Zadanie",PT:"Tarefa",RU:"Задача",VI:"Nhiệm vụ",TR:"Görev",UR:"ٹاسک",UZ:"Vazifa",ZH:"任务"},
 save:{AR:"حفظ",DE:"Speichern",EN:"Save",ES:"Guardar",FA:"ذخیره",FR:"Enregistrer",HI:"सहेजें",ID:"Simpan",IT:"Salva",JA:"保存",KO:"저장",SW:"Hifadhi",PL:"Zapisz",PT:"Salvar",RU:"Сохранить",VI:"Lưu",TR:"Kaydet",UR:"محفوظ کریں",UZ:"Saqlash",ZH:"保存"},
 search_note:{AR:"ابحث عن ملاحظة",DE:"Notiz suchen",EN:"Search note",ES:"Buscar nota",FA:"یادداشت را جستجو کنید",FR:"Rechercher une note",HI:"नोट खोजें",ID:"Cari catatan",IT:"Cerca nota",JA:"ノートを検索",KO:"노트 검색",SW:"Tafuta kumbukumbu",PL:"Szukaj notatki",PT:"Pesquisar nota",RU:"Поиск заметки",VI:"Tìm kiếm ghi chú",TR:"Not ara",UR:"نوٹ تلاش کریں",UZ:"Eslatmani qidirish",ZH:"搜索笔记"},
 search_in_note_content:{AR:"ابحث في محتوى الملاحظة",DE:"In Notizinhalt suchen",EN:"Search in note content",ES:"Buscar en el contenido de la nota",FA:"در محتوای یادداشت جستجو کنید",FR:"Rechercher dans le contenu de la note",HI:"नोट की सामग्री में खोजें",ID:"Cari di dalam konten catatan",IT:"Cerca nel contenuto della nota",JA:"ノートの内容で検索",KO:"노트 내용에서 검색",SW:"Tafuta ndani ya maudhui ya kumbukumbu",PL:"Szukaj w treści notatki",PT:"Pesquisar no conteúdo da nota",RU:"Поиск в содержании заметки",VI:"Tìm kiếm trong nội dung ghi chú",TR:"Not içeriğinde ara",UR:"نوٹ کے مواد میں تلاش کریں",UZ:"Eslatma matnida qidirish",ZH:"在笔记内容中搜索"},
@@ -383,8 +486,19 @@ select_language:{AR:"اختر اللغة",DE:"Sprache auswählen",EN:"Select lan
 save_all_data:{AR:"احفظ جميع البيانات",DE:"Alle Daten speichern",EN:"Save all data",ES:"Guardar todos los datos",FA:"تمام داده‌ها را ذخیره کنید",FR:"Enregistrer toutes les données",HI:"सभी डेटा सहेजें",ID:"Simpan semua data",IT:"Salva tutti i dati",JA:"すべてのデータを保存",KO:"모든 데이터 저장",SW:"Hifadhi data zote",PL:"Zapisz wszystkie dane",PT:"Salvar todos os dados",RU:"Сохранить все данные",VI:"Lưu tất cả dữ liệu",TR:"Tüm verileri kaydet",UR:"تمام ڈیٹا محفوظ کریں",UZ:"Barcha ma'lumotlarni saqlang",ZH:"保存所有数据"},
 upload_data:{AR:"تحميل البيانات",DE:"Daten hochladen",EN:"Upload data",ES:"Subir datos",FA:"بارگذاری داده‌ها",FR:"Téléverser des données",HI:"डेटा अपलोड करें",ID:"Unggah data",IT:"Carica dati",JA:"データをアップロード",KO:"데이터 업로드",SW:"Pakia data",PL:"Prześlij dane",PT:"Carregar dados",RU:"Загрузить данные",VI:"Tải lên dữ liệu",TR:"Verileri yükle",UR:"ڈیٹا اپ لوڈ کریں",UZ:"Ma'lumotlarni yuklash",ZH:"上传数据"},
 reading_mode:{AR:"وضع القراءة",DE:"Lesemodus",EN:"Reading mode",ES:"Modo de lectura",FA:"حالت خواندن",FR:"Mode lecture",HI:"रीडिंग मोड",ID:"Mode membaca",IT:"Modalità lettura",JA:"リーディングモード",KO:"읽기 모드",SW:"Mpango wa kusoma",PL:"Tryb czytania",PT:"Modo de leitura",RU:"Режим чтения",VI:"Chế độ đọc",TR:"Okuma modu",UR:"پڑھنے کا طریقہ",UZ:"O'qish rejimi",ZH:"阅读模式"},
+today: {AR:"اليوم",DE:"Heute",EN:"Today",ES:"Hoy",FA:"امروز",FR:"Aujourd'hui",HI:"आज",ID:"Hari ini",IT:"Oggi",JA:"今日",KO:"오늘",SW:"Leo",PL:"Dzisiaj",PT:"Hoje",RU:"Сегодня",VI:"Hôm nay",TR:"Bugün",UR:"آج",UZ:"Bugun",ZH:"今天"},
+tomorrow: {AR:"غدًا",DE:"Morgen",EN:"Tomorrow",ES:"Mañana",FA:"فردا",FR:"Demain",HI:"कल",ID:"Besok",IT:"Domani",JA:"明日",KO:"내일",SW:"Kesho",PL:"Jutro",PT:"Amanhã",RU:"Завтра",VI:"Ngày mai",TR:"Yarın",UR:"کل",UZ:"Ertaga",ZH:"明天"},
 theme:{AR:"السمة",DE:"Thema",EN:"Theme",ES:"Tema",FA:"تم",FR:"Thème",HI:"थीम",ID:"Tema",IT:"Tema",JA:"テーマ",KO:"테마",SW:"Mada",PL:"Motyw",PT:"Tema",RU:"Тема",VI:"Chủ đề",TR:"Tema",UR:"تھیم",UZ:"Mavzu",ZH:"主题"},
-back: {AR:"رجوع",DE:"Zurück",EN:"Back",ES:"Atrás",FA:"بازگشت",FR:"Retour",HI:"वापस",ID:"Kembali",IT:"Indietro",JA:"戻る",KO:"뒤로",SW:"Nyuma",PL:"Wstecz",PT:"Voltar",RU:"Назад",VI:"Quay lại",TR:"Geri",UR:"پیچھے",UZ:"Orqaga",ZH:"返回"}
+back: {AR:"رجوع",DE:"Zurück",EN:"Back",ES:"Atrás",FA:"بازگشت",FR:"Retour",HI:"वापस",ID:"Kembali",IT:"Indietro",JA:"戻る",KO:"뒤로",SW:"Nyuma",PL:"Wstecz",PT:"Voltar",RU:"Назад",VI:"Quay lại",TR:"Geri",UR:"پیچھے",UZ:"Orqaga",ZH:"返回"},
+are_you_sure_delete_task: {AR:"هل أنت متأكد أنك تريد حذف هذه المهمة؟",DE:"Sind Sie sicher, dass Sie diese Aufgabe löschen möchten?",EN:"Are you sure you want to delete this task?",ES:"¿Estás seguro de que quieres eliminar esta tarea?",FA:"آیا مطمئنید که می‌خواهید این وظیفه را حذف کنید؟",FR:"Êtes-vous sûr de vouloir supprimer cette tâche ?",HI:"क्या आप वाकई इस कार्य को हटाना चाहते हैं?",ID:"Apakah Anda yakin ingin menghapus tugas ini?",IT:"Sei sicuro di voler eliminare questo compito?",JA:"このタスクを削除してもよろしいですか？",KO:"이 작업을 삭제하시겠습니까?",SW:"Je, una uhakika unataka kufuta kazi hii?",PL:"Czy na pewno chcesz usunąć to zadanie?",PT:"Tem certeza de que deseja excluir esta tarefa?",RU:"Вы уверены, что хотите удалить эту задачу?",VI:"Bạn có chắc chắn muốn xóa nhiệm vụ này không?",TR:"Bu görevi silmek istediğinize emin misiniz?",UR:"کیا آپ واقعی طور پر یہ ٹاسک حذف کرنا چاہتے ہیں؟",UZ:"Ushbu vazifani o'chirishni xohlaysizmi?",ZH:"你确定要删除这个任务吗？"},
+active: {AR:"نشط",DE:"Aktiv",EN:"Active",ES:"Activo",FA:"فعال",FR:"Actif",HI:"सक्रिय",ID:"Aktif",IT:"Attivo",JA:"アクティブ",KO:"활성",SW:"Anwani",PL:"Aktywny",PT:"Ativo",RU:"Активный",VI:"Hoạt động",TR:"Aktif",UR:"فعال",UZ:"Faol",ZH:"活跃"},
+overdue: {AR:"متأخر",DE:"Überfällig",EN:"Overdue",ES:"Atrasado",FA:"دیرکرد",FR:"En retard",HI:"विलंबित",ID:"Terlambat",IT:"Scaduto",JA:"期限切れ",KO:"지연된",SW:"Takwimu zilizopita",PL:"Przeterminowany",PT:"Atrasado",RU:"Просроченный",VI:"Quá hạn",TR:"Geciken",UR:"معطل",UZ:"Kechikkan",ZH:"过期"},
+completed: {AR:"مكتمل",DE:"Abgeschlossen",EN:"Completed",ES:"Completado",FA:"تکمیل شده",FR:"Terminé",HI:"पूर्ण",ID:"Selesai",IT:"Completato",JA:"完了",KO:"완료됨",SW:"Imekamilika",PL:"Ukończony",PT:"Concluído",RU:"Завершено",VI:"Đã hoàn thành",TR:"Tamamlanmış",UR:"مکمل",UZ:"Tugallangan",ZH:"已完成"},
+delete_all: {AR:"حذف الكل",DE:"Alles löschen",EN:"Delete All",ES:"Eliminar todo",FA:"حذف همه",FR:"Tout supprimer",HI:"सभी हटाएं",ID:"Hapus semua",IT:"Elimina tutto",JA:"すべて削除",KO:"모두 삭제",SW:"Futa yote",PL:"Usuń wszystko",PT:"Excluir tudo",RU:"Удалить все",VI:"Xóa tất cả",TR:"Tümünü Sil",UR:"سب مٹا دیں",UZ:"Hammasini o'chirish",ZH:"删除全部"},
+are_you_sure_delete_all_completed_tasks: {AR:"هل أنت متأكد أنك تريد حذف جميع المهام المكتملة؟",DE:"Sind Sie sicher, dass Sie alle abgeschlossenen Aufgaben löschen möchten?",EN:"Are you sure you want to delete all completed tasks?",ES:"¿Estás seguro de que quieres eliminar todas las tareas completadas?",FA:"آیا مطمئنید که می‌خواهید همه وظایف تکمیل شده را حذف کنید؟",FR:"Êtes-vous sûr de vouloir supprimer toutes les tâches terminées ?",HI:"क्या आप वाकई सभी पूर्ण कार्यों को हटाना चाहते हैं?",ID:"Apakah Anda yakin ingin menghapus semua tugas yang telah selesai?",IT:"Sei sicuro di voler eliminare tutte le attività completate?",JA:"すべての完了したタスクを削除してもよろしいですか？",KO:"모든 완료된 작업을 삭제하시겠습니까?",SW:"Je, una uhakika unataka kufuta kazi zote zilizokamilika?",PL:"Czy na pewno chcesz usunąć wszystkie ukończone zadania?",PT:"Tem certeza de que deseja excluir todas as tarefas concluídas?",RU:"Вы уверены, что хотите удалить все завершенные задачи?",VI:"Bạn có chắc chắn muốn xóa tất cả các nhiệm vụ đã hoàn thành không?",TR:"Tüm tamamlanmış görevleri silmek istediğinize emin misiniz?",UR:"کیا آپ واقعی طور پر تمام مکمل ہوئے کام حذف کرنا چاہتے ہیں؟",UZ:"Barcha tugallangan vazifalarni o'chirishni xohlaysizmi?",ZH:"你确定要删除所有已完成的任务吗？"},
+add_subtask: {AR:"إضافة مهمة فرعية",DE:"Unteraufgabe hinzufügen",EN:"Add Subtask",ES:"Agregar subtarea",FA:"اضافه کردن زیروظیفه",FR:"Ajouter une sous-tâche",HI:"उपकार्य जोड़ें",ID:"Tambah sub-tugas",IT:"Aggiungi sottoattività",JA:"サブタスクを追加",KO:"하위 작업 추가",SW:"Ongeza kazi ndogo",PL:"Dodaj podzadanie",PT:"Adicionar subtarefa",RU:"Добавить подзадачу",VI:"Thêm nhiệm vụ phụ",TR:"Alt Görev Ekle",UR:"ذیلی کام شامل کریں",UZ:"Pastki vazifa qo'shish",ZH:"添加子任务"},
+what_to_do: {AR:"ماذا ستفعل؟",DE:"Was ist zu tun?",EN:"What to do?",ES:"¿Qué hacer?",FA:"چه کاری انجام دهید؟",FR:"Qu'est-ce qu'il faut faire ?",HI:"क्या करना है?",ID:"Apa yang harus dilakukan?",IT:"Cosa fare?",JA:"何をしますか？",KO:"무엇을 할까요?",SW:"Je, kitu kifanyike vipi?",PL:"Co zrobić?",PT:"O que fazer?",RU:"Что нужно сделать?",VI:"Cần làm gì?",TR:"Ne yapılacak?",UR:"کیا کرنا ہے؟",UZ:"Nima qilish kerak?",ZH:"要做什么？"},
+task_name_cannot_be_empty: {AR:"اسم المهمة لا يمكن أن يكون فارغًا.",DE:"Der Aufgabenname darf nicht leer sein.",EN:"Task name cannot be empty.",ES:"El nombre de la tarea no puede estar vacío.",FA:"نام وظیفه نمی‌تواند خالی باشد.",FR:"Le nom de la tâche ne peut pas être vide.",HI:"कार्य का नाम खाली नहीं हो सकता।",ID:"Nama tugas tidak boleh kosong.",IT:"Il nome del compito non può essere vuoto.",JA:"タスク名を空にすることはできません。",KO:"작업 이름은 비워둘 수 없습니다.",SW:"Jina la kazi halitakiwi kuwa tupu.",PL:"Nazwa zadania nie może być pusta.",PT:"O nome da tarefa não pode estar vazio.",RU:"Название задачи не может быть пустым.",VI:"Tên nhiệm vụ không thể để trống.",TR:"Görev adı boş bırakılamaz.",UR:"کام کا نام خالی نہیں ہو سکتا۔",UZ:"Vazifa nomi bo'sh bo'lishi mumkin emas.",ZH:"任务名称不能为空。"}
 };
 function translate(key, langCode = localStorage.getItem("selectedLanguage") || "EN") {return translations[key]?.[langCode] || translations[key]["EN"];}
 document.addEventListener("DOMContentLoaded", function () {
@@ -409,7 +523,7 @@ function createMainModal() {
     document.body.appendChild(modal_dil);
     modal_dil.querySelector(".dili_degistir").addEventListener("click", createLanguageSelectionModal);
     modal_dil.querySelector(".close_main_modal").addEventListener("click", function () {
-        if (isFirstVisit) {
+if (isFirstVisit) {
     localStorage.setItem("selectedLanguage", "EN");
     localStorage.setItem("hasSelectedLanguage", "true"); 
 }
@@ -525,12 +639,12 @@ const buttonRules = {
 'languege':{content:`"${translate("select_language")}"`,right:'-4px',top:'-35px',left:'auto',transform:'none'},
 'export':{content:`"${translate("save_all_data")}"`,top:'-37px',left:'-4px',transform:'none'},
 'import':{content:`"${translate("upload_data")}"`,top:'-37px',left:'-4px',transform:'none'},
-'omod_toggle':{content:`"${translate("reading_mode")}"!important`,right:'-6px',transform:'none!important',left:'auto!important'}
+'omod_toggle':{content:`"${translate("reading_mode")}"!important`,right:'-6px',transform:'none',left:'auto'}
 };
 const editorButtons = {'h1':translate("heading_1"),'h2':translate("heading_2"),'bold':translate("bold"),'italic':translate("italic"),'list-ul':translate("bulleted_list"),'list-ol':translate("numbered_list"),'strike':translate("strikethrough"),'left':translate("align_left"),'center':translate("align_center"),'right':translate("align_right"),'erase':translate("remove_formatting"),'horizontalrule':translate("horizontal_line"),'link':translate("add_link"),'unlink':translate("remove_link"),'html':translate("add_html"),'table':translate("add_table"),'select':translate("select_all"),'kucult':translate("decrease_font_size"),'buyut':translate("increase_font_size"),'undo':translate("undo"),'redo':translate("redo")};
 let cssText = '';
 Object.entries(buttonRules).forEach(([id, props]) => {
-cssText += `${id === 'omod_toggle' ? 'div':'button'}#${id}::before {`;
+cssText += `${id === 'omod_toggle' ? '':'button'}#${id}::before {`;
 Object.entries(props).forEach(([prop, value]) => {cssText += `${prop}:${value};`;}); cssText += '}';
 });
 Object.entries(editorButtons).forEach(([name, text]) => {cssText += `button.${name}-button::before{content:"${text}";}`;});
@@ -539,6 +653,7 @@ style.textContent = cssText;
 document.head.appendChild(style);
 }
 createCSSRules();
+
 document.addEventListener('DOMContentLoaded', function () {
 const sidebar = document.querySelector('.sidebar');
 const geriNotebar = document.getElementsByClassName('geriNotebar')[0];
@@ -563,9 +678,11 @@ saveNoteButton.textContent = translate("save");
 const deleteNoteButton = document.getElementById('delete-note-button');
 deleteNoteButton.textContent = translate("delete");
 const addCategoryButton = document.getElementById('add-category-button');
-addCategoryButton.textContent = translate("new_category");
+addCategoryButton.textContent = translate("category");
 const addNoteButton = document.getElementById('add-note-button');
-addNoteButton.textContent = translate("new_note");
+addNoteButton.textContent = translate("note");
+const addTaskButton = document.getElementById('add-task-button');
+addTaskButton.textContent = translate("task");
 let notes = [];
 let categories = [];
 let selectedNote = null;
@@ -987,46 +1104,6 @@ window.dispatchEvent(new Event('resize'));
     });
     enableDragAndDrop('.sortable2', 'note-list', updateNoteOrder);
 }
-function loadNoteContent() {
-  if (selectedNote) {
-      noteEditor.innerHTML = selectedNote.content;
-      noteTitleInput.value = selectedNote.title;
-      const createdAtDate = new Date(selectedNote.createdAt);
-      const day = String(createdAtDate.getDate()).padStart(2, '0');
-      const month = String(createdAtDate.getMonth() + 1).padStart(2, '0');
-      const year = createdAtDate.getFullYear();
-      const hours = String(createdAtDate.getHours()).padStart(2, '0');
-      const minutes = String(createdAtDate.getMinutes()).padStart(2, '0');
-      const formattedDate = `${day}.${month}.${year} ${hours}:${minutes}`;
-      document.getElementById('note-created-date').textContent = `${formattedDate}`;
-//not içinde her türlü link çalışsın
-  document.querySelectorAll('#note-editor a').forEach(link => {
-    if (link.innerHTML.match(/<.*>/)) { 
-      link.addEventListener('click', function(e) {
-        e.preventDefault();
-        window.open(this.href, '_blank');
-      });
-    }
-  });
-    const checkboxes = editor.querySelectorAll('input[type="checkbox"]');
-    checkboxes.forEach(checkbox => {
-        const label = checkbox.nextSibling;
-        checkbox.addEventListener('change', function () {
-            if (this.checked) {
-                label.style.opacity = '0.5';
-                this.setAttribute('checked', 'checked');
-            } else {
-                label.style.opacity = '1';
-                this.removeAttribute('checked');
-            }
-        });
-    });
-        } else {
-            noteEditor.innerHTML = '';
-            noteTitleInput.value = '';
-            document.getElementById('note-created-date').textContent = '';
-        }
-    }
 function addCategory() {
   const modal = document.createElement('div');
   modal.classList.add('modal');
@@ -1097,210 +1174,1317 @@ const windowWidth = window.innerWidth;
     }
   });
 }
-function addNote() {
-  const modal = document.createElement('div');
-  modal.classList.add('modal');
-  modal.innerHTML = `
-    <div class="modal-content">
-      <label for="newNoteTitle">${translate("note_title")}</label>
-      <input type="text" id="newNoteTitle">
-      <div class="colors"> 
-        <div class="color-option" style="background-color: #b1653d;" data-color="b1653d"></div>
-        <div class="color-option" style="background-color: #9a900b;" data-color="9a900b"></div>
-        <div class="color-option" style="background-color: #6c8f20;" data-color="6c8f20"></div>
-        <div class="color-option" style="background-color: #1490b5;" data-color="1490b5"></div>
-        <div class="color-option" style="background-color: #1b86f2;" data-color="1b86f2"></div>
-        <div class="color-option" style="background-color: #527cf8;" data-color="527cf8"></div>
-        <div class="color-option" style="background-color: #8772ff;" data-color="8772ff"></div>
-        <div class="color-option" style="background-color: #b34e99;" data-color="b34e99"></div>
-        <div class="color-option" style="background-color: #bb4141;" data-color="bb4141"></div>
-      </div>
-      <button id="confirmDelete">${translate("add")}</button>
-      <button id="cancelDelete">${translate("cancel")}</button>
-    </div>
-  `;
-  document.body.appendChild(modal);
-  const newNoteTitleInput = document.getElementById('newNoteTitle');
-  const confirmDelete = document.getElementById('confirmDelete');
-  const cancelDelete = document.getElementById('cancelDelete');
-  const colorOptions = document.querySelectorAll('.color-option');
-  let selectedColor = 'b1653d'; 
-  colorOptions.forEach(option => {
-    option.addEventListener('click', () => {
-      document.querySelectorAll('.color-option').forEach(opt => opt.classList.remove('selected'));
-      option.classList.add('selected');
-      selectedColor = option.getAttribute('data-color');
-    });
-  });
-  colorOptions[0].classList.add('selected');
-  newNoteTitleInput.focus();
-  confirmDelete.addEventListener('click', () => {
-    const title = newNoteTitleInput.value.trim();
-    const emptyCategory = localStorage.getItem('categories');
-    if (!title || title.trim() === '') {
-      alert(translate("note_title_empty"));
-      return;
+function renderTasks(tabType, taskDiv) {
+    const taskList = document.querySelector('.task-list');
+    if (taskList) {
+        taskList.remove();
     }
-    if (!emptyCategory || emptyCategory.trim() === '') {
-      alert(translate("please_add_category_first"));
-      return;
-    }
-    const newNote = {
-      id: Date.now().toString(),
-      title: title.trim(),
-      color: selectedColor,
-      content: '',
-      categories: selectedCategory ? [selectedCategory.id] : [],
-      createdAt: new Date().toISOString()
-    };
-    notes.unshift(newNote);
-    selectedNote = newNote;
-    saveData(false);
-    renderNotes();
-    loadNoteContent();
-    noteContentIc.style.display = 'block';
-    document.body.removeChild(modal);
-  });
-  cancelDelete.addEventListener('click', () => {
-    document.body.removeChild(modal);
-  });
-  newNoteTitleInput.addEventListener('keydown', (event) => {
-    if (event.key === 'Enter') {
-      confirmDelete.click();
-    }
-  });
-}
-function enableDragAndDrop(sortableClass, listId, updateOrderCallback) {
-    const sortables = document.querySelectorAll(sortableClass);
-    let draggingEle = null;
-    let placeholder = null;
-    let tempPlaceholder = null;
-    let dragPreviewEl = null;
-    let offsetX, offsetY;
-    let currentSortable = null;
-    let isDragging = false;
-    let startX, startY;
-    sortables.forEach(sortable => {
-        const rows = sortable.querySelectorAll('li');
-        rows.forEach(row => {
-            row.addEventListener('mousedown', (e) => {
-if (document.documentElement.lang === "tr") {
-var searchTerm = noteSearchInput.value.turkishToLower();
-var contentSearchTerm = noteContentSearchInput.value.turkishToLower();
-}else{
-var searchTerm = noteSearchInput.value.toLowerCase();
-var contentSearchTerm = noteContentSearchInput.value.toLowerCase();
-}
-                const isSearchActive = searchTerm || contentSearchTerm;
-                if (isSearchActive) {
-                    e.preventDefault();
-                    return;
+    const taskListContainer = document.createElement('div');
+    taskListContainer.classList.add('task-list');
+
+    const today = new Date();
+    today.setHours(0, 0, 0, 0);
+
+    const createTaskList = () => {
+        if (tabType === 'active' || tabType === 'completed') {
+            let tasksToShow = [];
+            const tasksCopy = JSON.parse(JSON.stringify(selectedNote.task_content));
+            tasksCopy.forEach((task, taskIndex) => {
+                if (tabType === 'active') {
+                    if (task.task_completed === 0 || (task.subTasks && task.subTasks.some(subTask => subTask.task_completed === 0))) {
+                        tasksToShow.push({ ...task, originalTaskIndex: taskIndex });
+                    }
+                } else { // tabType === 'completed'
+                    if (task.task_completed === 1) {
+                        tasksToShow.push({ ...task, originalTaskIndex: taskIndex });
+                    } else {
+                        task.subTasks.forEach((subTask, subTaskIndex) => {
+                            if (subTask.task_completed === 1) {
+                                tasksToShow.push({
+                                    ...task,
+                                    name: subTask.name,
+                                    date: subTask.date,
+                                    task_completed: subTask.task_completed,
+                                    isSubTask: true,
+                                    originalTaskIndex: taskIndex,
+                                    originalSubTaskIndex: subTaskIndex,
+                                    subTasks: [],
+                                    id: subTask.id // Alt görevin kendi ID'sini ekle
+                                });
+                            }
+                        });
+                    }
                 }
-        const tooltips = document.querySelectorAll('.tooltip');
-        for (const tooltip of tooltips) {
-            tooltip.removeAttribute('style');
+            });
+            return tasksToShow;
+        } else {
+            let tasksToShow = [];
+            const tasksCopy = JSON.parse(JSON.stringify(selectedNote.task_content));
+
+            tasksCopy.forEach((task, taskIndex) => {
+                const taskDate = task.date ? new Date(task.date) : null;
+                taskDate?.setHours(0, 0, 0, 0);
+
+                const isTaskMatch = task.task_completed === 0 && taskDate && (
+                    (tabType === 'today' && taskDate.getTime() === today.getTime()) ||
+                    (tabType === 'overdue' && taskDate < today)
+                );
+
+                const matchingSubtasks = task.subTasks.filter(subTask => {
+                    const subTaskDate = subTask.date ? new Date(subTask.date) : null;
+                    subTaskDate?.setHours(0, 0, 0, 0);
+                    return subTask.task_completed === 0 && subTaskDate && (
+                        (tabType === 'today' && subTaskDate.getTime() === today.getTime()) ||
+                        (tabType === 'overdue' && subTaskDate < today)
+                    );
+                });
+
+                if (isTaskMatch) {
+                    const taskToAdd = {
+                        ...task,
+                        originalTaskIndex: taskIndex,
+                        subTasks: task.subTasks
+                    };
+                    tasksToShow.push(taskToAdd);
+                }
+
+                if (matchingSubtasks.length > 0 && !isTaskMatch) {
+                    matchingSubtasks.forEach(subTask => {
+                        const subTaskDate = new Date(subTask.date);
+                        subTaskDate.setHours(0, 0, 0, 0);
+
+                        if (!taskDate || subTaskDate.getTime() !== taskDate.getTime()) {
+                            tasksToShow.push({
+                                ...task,
+                                name: subTask.name,
+                                date: subTask.date,
+                                task_completed: subTask.task_completed,
+                                isSubTask: true,
+                                originalTaskIndex: taskIndex,
+                                originalSubTaskIndex: task.subTasks.findIndex(st => st.name === subTask.name && st.date === subTask.date),
+                                subTasks: [],
+                                id: subTask.id // Alt görevin kendi ID'sini ekle
+                            });
+                        }
+                    });
+                }
+            });
+
+            return tasksToShow;
         }
-                draggingEle = row;
-                currentSortable = sortable;
-                startX = e.clientX;
-                startY = e.clientY;
-                const spanElement = draggingEle.querySelector('span');
-                if (spanElement) {
-                    spanElement.classList.add('dragging');
+    };
+
+    const filteredTasks = createTaskList();
+    const savedTaskOrder = localStorage.getItem(`taskOrder-${tabType}-${selectedNote.id}`);
+    let taskOrder = savedTaskOrder ? JSON.parse(savedTaskOrder).map(id => String(id)) : [];
+    filteredTasks.forEach(task => {
+        task.id = String(task.id);
+    });
+    taskOrder = taskOrder.filter(id => filteredTasks.some(task => task.id === id));
+    if (taskOrder.length > 0) {
+        filteredTasks.sort((a, b) => {
+            const indexA = taskOrder.indexOf(a.id);
+            const indexB = taskOrder.indexOf(b.id);
+            return indexA - indexB;
+        });
+    }
+
+    filteredTasks.forEach(task => {
+        const taskItemContainer = document.createElement('div');
+        taskItemContainer.classList.add('task_list_container');
+        taskItemContainer.dataset.id = task.isSubTask ? task.id : task.id; // Alt görevse kendi ID'sini kullan
+        taskItemContainer.dataset.type = task.isSubTask ? 'subtask' : 'task'; // Türü ayarla
+        const task_date_div = document.createElement('div');
+        task_date_div.classList.add('task_date_div');
+
+        const taskspan = document.createElement('span');
+        taskspan.id = 'renk' + task.color;
+        taskspan.addEventListener('click', () => {
+            toggleTaskCompletion(task);
+            taskItemContainer.remove();
+            highlightTabsWithContent();
+        });
+
+        const taskdiv = document.createElement('div');
+        taskdiv.textContent = task.name;
+
+        const datediv = document.createElement('div');
+        datediv.classList.add('date_div');
+
+        const togglediv = document.createElement('div');
+        togglediv.classList.add('togglediv');
+
+        datediv.textContent = task.date ? (new Date(task.date).toDateString() === new Date().toDateString() ? translate("today") : (new Date(task.date).toDateString() === new Date(new Date().setDate(new Date().getDate() + 1)).toDateString() ? translate("tomorrow") : `${new Date(task.date).getDate()} ${new Date(task.date).toLocaleString(document.documentElement.lang, { month: 'short' })}` || '')) : '';
+        const edit_delete_div = document.createElement('div');
+        edit_delete_div.classList.add('edit_delete_div');
+
+        if (tabType === 'active' || tabType === 'today' || tabType === 'overdue') {
+            const editButton = document.createElement('button');
+            editButton.classList.add('edit-task-button');
+            editButton.addEventListener('click', () => {
+                if (task.isSubTask) {
+                    const originalTask = selectedNote.task_content[task.originalTaskIndex];
+                    const originalSubTask = originalTask.subTasks[task.originalSubTaskIndex];
+                    openSubTaskModalForEdit(originalTask, originalSubTask);
+                } else {
+                    const originalTask = selectedNote.task_content[task.originalTaskIndex];
+                    openTaskModalForEdit(originalTask);
                 }
-                const rect = draggingEle.getBoundingClientRect();
-                offsetX = e.clientX - rect.left;
-                offsetY = e.clientY - rect.top;
-                dragPreviewEl = draggingEle.cloneNode(true);
-                dragPreviewEl.id = "drag-preview";
-                dragPreviewEl.style.position = "absolute";
-                dragPreviewEl.style.left = `${rect.left}px`;
-                dragPreviewEl.style.top = `${rect.top}px`;
-                dragPreviewEl.style.width = `${rect.width}px`;
-                dragPreviewEl.style.pointerEvents = "none";
-                document.body.appendChild(dragPreviewEl);
-                tempPlaceholder = document.createElement('li');
-                tempPlaceholder.classList.add('temporary-placeholder');
-                sortable.appendChild(tempPlaceholder);
-                document.addEventListener('mousemove', onMouseMove);
-                document.addEventListener('mouseup', onMouseUp);
+            });
+            edit_delete_div.appendChild(editButton);
+        }
+        const deleteButton = document.createElement('button');
+        deleteButton.classList.add('delete-task-button');
+        deleteButton.addEventListener('click', () => {
+            if (confirm(translate("are_you_sure_delete_task"))) {
+                if (task.isSubTask) {
+                    deleteSubTask(task, task);
+                } else {
+                    deleteTask(task);
+                }
+                taskItemContainer.remove();
+            }
+        });
+        edit_delete_div.appendChild(deleteButton);
+
+        const subTasksContainer = document.createElement('div');
+        subTasksContainer.classList.add('subtasks_list_container');
+        if (!task.isSubTask) {
+            task.subTasks.forEach(subTask => {
+                let showSubTask = false;
+                if (tabType === 'active' && subTask.task_completed === 0) {
+                    showSubTask = true;
+                } else if (tabType === 'completed' && subTask.task_completed === 1) {
+                    showSubTask = true;
+                } else if (tabType === 'today' || tabType === 'overdue') {
+                    const subTaskDate = new Date(subTask.date);
+                    subTaskDate?.setHours(0, 0, 0, 0);
+                    showSubTask = subTask.task_completed === 0 && (
+                        (tabType === 'today' && subTaskDate?.getTime() === today.getTime()) ||
+                        (tabType === 'overdue' && subTaskDate < today)
+                    );
+                }
+                if (showSubTask) {
+                    const subtaskspan = document.createElement('span');
+                    subtaskspan.id = 'renk' + task.color;
+                    const subTaskdiv = document.createElement('div');
+                    subTaskdiv.textContent = subTask.name;
+
+                    const subTaskDate = document.createElement('div');
+                    subTaskDate.classList.add('date_div');
+                    subTaskDate.textContent = subTask.date ? (new Date(subTask.date).toDateString() === new Date().toDateString() ? translate("today") : (new Date(subTask.date).toDateString() === new Date(new Date().setDate(new Date().getDate() + 1)).toDateString() ? translate("tomorrow") : `${new Date(subTask.date).getDate()} ${new Date(subTask.date).toLocaleString(document.documentElement.lang, { month: 'short' })}` || '')) : '';
+                    const sub_edit_delete_div = document.createElement('div');
+                    sub_edit_delete_div.classList.add('sub_edit_delete_div');
+
+                    if (tabType === 'active' || tabType === 'today' || tabType === 'overdue') {
+                        const subTaskEditButton = document.createElement('button');
+                        subTaskEditButton.classList.add('edit-subtask-button');
+                        subTaskEditButton.addEventListener('click', () => {
+                            const originalTask = selectedNote.task_content[task.originalTaskIndex];
+                            openSubTaskModalForEdit(originalTask, subTask);
+                        });
+                        sub_edit_delete_div.appendChild(subTaskEditButton);
+                    }
+
+                    const subTaskWrapper = document.createElement('div');
+                    subTaskWrapper.classList.add('subtask_list_wrapper');
+                    subTaskWrapper.dataset.id = subTask.id;
+                    subTaskWrapper.dataset.type = 'subtask';
+                    const subTaskDeleteButton = document.createElement('button');
+                    subTaskDeleteButton.classList.add('delete-subtask-button');
+                    subTaskDeleteButton.addEventListener('click', (e) => {
+                        e.stopPropagation();
+                        if (confirm(translate("are_you_sure_delete_task"))) {
+                            deleteSubTask(task, subTask);
+                            subTaskWrapper.remove();
+                            if (subTasksContainer.children.length === 0) { togglediv.remove(); }
+                        }
+                    });
+
+                    subtaskspan.addEventListener('click', () => {
+                        const originalTask = selectedNote.task_content[task.originalTaskIndex];
+                        const subTaskIndex = originalTask.subTasks.findIndex(st =>
+                            st.name === subTask.name && st.date === subTask.date && st.task_completed === subTask.task_completed
+                        );
+                        const originalSubTask = originalTask.subTasks[subTaskIndex];
+
+                        if (originalTask.task_completed === 1) {
+                            originalTask.task_completed = 0;
+                            originalTask.subTasks.forEach(sub => {
+                                sub.task_completed = 0;
+                            });
+                            taskItemContainer.remove();
+                        } else {
+                            originalSubTask.task_completed = 1;
+                            subTaskWrapper.remove();
+                            if (subTasksContainer.children.length === 0) {
+                                togglediv.remove();
+                            }
+                        }
+                        saveData(false);
+                        highlightTabsWithContent();
+                    });
+                    subTaskWrapper.appendChild(subtaskspan);
+                    subTaskWrapper.appendChild(subTaskdiv);
+                    subTaskWrapper.appendChild(subTaskDate);
+                    sub_edit_delete_div.appendChild(subTaskDeleteButton);
+                    subTaskWrapper.appendChild(sub_edit_delete_div);
+                    subTasksContainer.appendChild(subTaskWrapper);
+                }
+            });
+        }
+
+        task_date_div.appendChild(taskspan);
+        task_date_div.appendChild(taskdiv);
+        task_date_div.appendChild(datediv);
+        edit_delete_div.appendChild(deleteButton);
+        task_date_div.appendChild(edit_delete_div);
+        taskItemContainer.appendChild(task_date_div);
+        if (!task.isSubTask && subTasksContainer.children.length > 0) {
+            task_date_div.appendChild(togglediv);
+            taskItemContainer.appendChild(subTasksContainer);
+        }
+        taskListContainer.appendChild(taskItemContainer);
+    });
+
+    taskDiv.appendChild(taskListContainer);
+
+    // Sürükle-bırak işlevselliğini etkinleştir
+    enableDragAndDrop('.task-list', `task-list-${tabType}`, () => updateTaskOrder(tabType), '.task_list_container');
+    enableDragAndDrop('.subtasks_list_container', `subtasks-list-${tabType}`, () => updateTaskOrder(tabType), '.subtask_list_wrapper');
+
+    highlightTabsWithContent();
+}
+function highlightTabsWithContent() {
+    // Get references to all tabs
+    const activeTab = document.querySelector('.tab.active');
+    const todayTab = document.querySelector('.tab.today');
+    const overdueTab = document.querySelector('.tab.overdue');
+    const completedTab = document.querySelector('.tab.completed');
+    
+    // Function to check if a tab type has content
+    const hasContent = (tabType) => {
+        // Create a temporary variable to store the filtered tasks
+        let filteredTasks = [];
+        
+        // Copy tasks to work with
+        const tasksCopy = JSON.parse(JSON.stringify(selectedNote.task_content));
+        const today = new Date();
+        today.setHours(0, 0, 0, 0);
+        
+        // Check for content based on tab type
+        if (tabType === 'active') {
+            // Check for active tasks (non-completed tasks or tasks with non-completed subtasks)
+            return tasksCopy.some(task => 
+                task.task_completed === 0 || 
+                (task.subTasks && task.subTasks.some(subTask => subTask.task_completed === 0))
+            );
+        } 
+        else if (tabType === 'completed') {
+            // Check for completed tasks
+            return tasksCopy.some(task => 
+                task.task_completed === 1 || 
+                (task.subTasks && task.subTasks.some(subTask => subTask.task_completed === 1))
+            );
+        }
+        else if (tabType === 'today') {
+            // Check for tasks due today
+            return tasksCopy.some(task => {
+                const taskDate = task.date ? new Date(task.date) : null;
+                taskDate?.setHours(0, 0, 0, 0);
+                
+                // Check main task
+                const isTaskMatch = task.task_completed === 0 && taskDate && 
+                    taskDate.getTime() === today.getTime();
+                
+                // Check subtasks
+                const hasMatchingSubtask = task.subTasks.some(subTask => {
+                    const subTaskDate = subTask.date ? new Date(subTask.date) : null;
+                    subTaskDate?.setHours(0, 0, 0, 0);
+                    return subTask.task_completed === 0 && subTaskDate && 
+                        subTaskDate.getTime() === today.getTime();
+                });
+                
+                return isTaskMatch || hasMatchingSubtask;
+            });
+        }
+        else if (tabType === 'overdue') {
+            // Check for overdue tasks
+            return tasksCopy.some(task => {
+                const taskDate = task.date ? new Date(task.date) : null;
+                taskDate?.setHours(0, 0, 0, 0);
+                
+                // Check main task
+                const isTaskMatch = task.task_completed === 0 && taskDate && 
+                    taskDate < today;
+                
+                // Check subtasks
+                const hasMatchingSubtask = task.subTasks.some(subTask => {
+                    const subTaskDate = subTask.date ? new Date(subTask.date) : null;
+                    subTaskDate?.setHours(0, 0, 0, 0);
+                    return subTask.task_completed === 0 && subTaskDate && 
+                        subTaskDate < today;
+                });
+                
+                return isTaskMatch || hasMatchingSubtask;
+            });
+        }
+        
+        return false;
+    };
+    
+    // Check and highlight each tab if it has content
+    if (activeTab && hasContent('active')) {
+        activeTab.classList.add('active_light');
+    } else if (activeTab) {
+        activeTab.classList.remove('active_light');
+    }
+    
+    if (todayTab && hasContent('today')) {
+        todayTab.classList.add('today_light');
+    } else if (todayTab) {
+        todayTab.classList.remove('today_light');
+    }
+    
+    if (overdueTab && hasContent('overdue')) {
+        overdueTab.classList.add('overdue_light'); // Fixed the class name (removed space)
+    } else if (overdueTab) {
+        overdueTab.classList.remove('overdue_light');
+    }
+    
+    if (completedTab && hasContent('completed')) {
+        completedTab.classList.add('completed_light'); // Fixed the class name (removed space)
+    } else if (completedTab) {
+        completedTab.classList.remove('completed_light');
+    }
+}
+function loadNoteContent() {
+    if (selectedNote) {
+        noteEditor.innerHTML = selectedNote.content;
+        noteTitleInput.value = selectedNote.title;
+        const createdAtDate = new Date(selectedNote.createdAt);
+        const day = String(createdAtDate.getDate()).padStart(2, '0');
+        const month = String(createdAtDate.getMonth() + 1).padStart(2, '0');
+        const year = createdAtDate.getFullYear();
+        const hours = String(createdAtDate.getHours()).padStart(2, '0');
+        const minutes = String(createdAtDate.getMinutes()).padStart(2, '0');
+        const formattedDate = `${day}.${month}.${year} ${hours}:${minutes}`;
+        document.getElementById('note-created-date').textContent = `${formattedDate}`;
+        if (selectedNote.task_content) {
+            setupTaskUI();
+            const taskDiv = document.querySelector('.task_div');
+            const tabsContainer = document.createElement('div');
+            tabsContainer.classList.add('tabs-container');
+            
+            const activeTab = document.createElement('button');
+            activeTab.textContent = translate("active");
+            activeTab.classList.add('tab','active','active-tab');
+            activeTab.addEventListener('click', () => switchTab('active'));
+            
+            const todayTab = document.createElement('button');
+            todayTab.textContent = translate("today");
+            todayTab.classList.add('tab', 'today');
+            todayTab.addEventListener('click', () => switchTab('today'));
+            
+            const overdueTab = document.createElement('button');
+            overdueTab.textContent = translate("overdue");
+            overdueTab.classList.add('tab', 'overdue');
+            overdueTab.addEventListener('click', () => switchTab('overdue'));
+            
+            const completedTab = document.createElement('button');
+            completedTab.textContent = translate("completed");
+            completedTab.classList.add('tab', 'completed');
+            completedTab.addEventListener('click', () => switchTab('completed'));
+            
+            tabsContainer.appendChild(activeTab);
+            tabsContainer.appendChild(todayTab);
+            tabsContainer.appendChild(overdueTab);
+            tabsContainer.appendChild(completedTab);
+            
+            taskDiv.appendChild(tabsContainer);
+            
+tabsContainer.insertAdjacentHTML('afterend', `<button class="delete-all-completed-button" style="display:none;">${translate("delete_all")}</button>`);
+const deleteAllCompletedButton = document.querySelector('.delete-all-completed-button');
+deleteAllCompletedButton.addEventListener('click', () => {
+    if (confirm(translate("are_you_sure_delete_all_completed_tasks"))) {
+        // Tamamlanmış görevleri ve alt görevleri temizle
+        selectedNote.task_content.forEach(task => {
+            if (task.subTasks) {
+                task.subTasks = task.subTasks.filter(subTask => subTask.task_completed === 0);
+            }
+        });
+        selectedNote.task_content = selectedNote.task_content.filter(task => {
+            return !(task.task_completed === 1 && (!task.subTasks || task.subTasks.length === 0));
+        });
+
+        // taskOrder-completed anahtarını sil
+        if (selectedNote && selectedNote.id) {
+            const completedKey = `taskOrder-completed-${selectedNote.id}`;
+            localStorage.removeItem(completedKey);
+        }
+
+        // Veriyi kaydet ve arayüzü güncelle
+        saveData(false);
+        highlightTabsWithContent();
+        document.querySelector('.task-list').innerHTML = "";
+        deleteAllCompletedButton.style.display = 'none'; 
+    }
+});
+
+            function switchTab(tabType) {
+                renderTasks(tabType, taskDiv);
+                document.querySelectorAll('.tab').forEach(tab => tab.classList.remove('active-tab'));
+                const tabMap = {
+                    'active': activeTab,
+                    'today': todayTab,
+                    'overdue': overdueTab,
+                    'completed': completedTab
+                };
+                tabMap[tabType].classList.add('active-tab');
+                
+                deleteAllCompletedButton.style.display = tabType === 'completed' ? 'inline-block' : 'none';
+                
+                if (tabType === 'completed') {
+                    const hasCompletedTasks = selectedNote.task_content.some(task => {
+                        return task.task_completed === 1 || (task.subTasks && task.subTasks.some(subTask => subTask.task_completed === 1));
+                    });
+                    deleteAllCompletedButton.style.display = hasCompletedTasks ? 'inline-block' : 'none';
+                    if (!hasCompletedTasks) {
+                        document.querySelector('.task-list').innerHTML = '';
+                    }
+                }
+                subtasksShow();
+            }
+
+            renderTasks('active', taskDiv);
+            subtasksShow();
+        } else {
+            if (document.querySelector('.task_div')) {
+                document.querySelector('.task_div').remove();
+                noteContentIc.classList.remove('note-task');
+            }
+        }
+        document.querySelectorAll('#note-editor a').forEach(link => {
+            if (link.innerHTML.match(/ /)) {
+                link.addEventListener('click', function (e) {
+                    e.preventDefault();
+                    window.open(this.href, '_blank');
+                });
+            }
+        });
+
+        const checkboxes = editor.querySelectorAll('input[type="checkbox"]');
+        checkboxes.forEach(checkbox => {
+            const label = checkbox.nextSibling;
+            checkbox.addEventListener('change', function () {
+                if (this.checked) {
+                    label.style.opacity = '0.5';
+                    this.setAttribute('checked', 'checked');
+                } else {
+                    label.style.opacity = '1';
+                    this.removeAttribute('checked');
+                }
             });
         });
+    } else {
+        noteEditor.innerHTML = '';
+        noteTitleInput.value = '';
+        document.getElementById('note-created-date').textContent = '';
+    }
+}
+function subtasksShow() {
+document.querySelectorAll('.togglediv').forEach(toggleDiv => {
+  toggleDiv.addEventListener('click', function() {
+    this.classList.toggle('active');
+    const taskContainer = this.closest('.task_list_container');
+    const subtasksContainer = taskContainer.querySelector('.subtasks_list_container');
+    subtasksContainer.classList.toggle('show');
+    if (subtasksContainer.classList.contains('show')) {
+      subtasksContainer.style.display = 'block';
+    } else {
+      subtasksContainer.style.display = 'none';
+    }
+  });
+});
+const taskList = document.getElementsByClassName('task-list')[0];
+if (document.querySelector('.thiza_button')) {
+    document.querySelector('.thiza_button').remove();
+}
+document.querySelector('.task_div').insertAdjacentHTML('afterbegin', `<button class="thiza_button"></button>`);
+const thiza = document.querySelector('.thiza_button');
+taskList.classList.toggle('thiza', localStorage.getItem('thizaState') === 'two');
+thiza.addEventListener('click', function() { 
+localStorage.setItem('thizaState', taskList.classList.toggle('thiza') ? 'two' : 'one');
+});
+}
+function toggleTaskCompletion(task) {
+    if (task.isSubTask) {
+        const parentTask = selectedNote.task_content[task.originalTaskIndex];
+        const subTask = parentTask.subTasks[task.originalSubTaskIndex];
+        subTask.task_completed = subTask.task_completed === 1 ? 0 : 1;
+        saveData(false);
+    } else {
+        const originalTask = selectedNote.task_content[task.originalTaskIndex];
+        if (originalTask.task_completed === 0) {
+            originalTask.task_completed = 1;
+            originalTask.subTasks.forEach(subTask => {
+                subTask.task_completed = 1;
+            });
+        } else {
+            originalTask.task_completed = 0;
+            originalTask.subTasks.forEach(subTask => {
+                subTask.task_completed = 0;
+            });
+        }
+        saveData(false);
+    }
+}
+function dateDesign(dateInput) {
+  const today = new Date().toISOString().split('T')[0];
+  dateInput.value = today;
+  const dateWrapper = document.createElement('div');
+  dateWrapper.style.position = 'relative';
+  const dateLabel = document.createElement('span');
+  dateLabel.classList.add('date_span');
+  dateLabel.textContent = translate("today");
+  dateInput.addEventListener('change', (e) => {
+    const selectedDate = new Date(e.target.value);
+    const today = new Date();
+    today.setHours(0, 0, 0, 0); 
+    dateLabel.textContent = selectedDate.getTime() === today.getTime() ? translate("today") : e.target.value;
+  });
+  dateWrapper.appendChild(dateInput);
+  dateWrapper.appendChild(dateLabel);
+  return dateWrapper;
+}
+function setupTaskUI() {
+    if (document.querySelector('.task_div')) document.querySelector('.task_div').remove();
+    const noteContentIc = document.querySelector('.note-content-ic');
+    noteContentIc.classList.add('note-task');
+    const taskDiv = document.createElement('div');
+    taskDiv.classList.add('task_div');
+    const addTaskButton = document.createElement('button');
+    addTaskButton.classList.add('gorev_ekle');
+    taskDiv.appendChild(addTaskButton);
+    addTaskButton.addEventListener('click', openTaskModal);
+    noteContentIc.appendChild(taskDiv);
+taskDiv.insertAdjacentHTML('afterbegin', `<div id="arrow" class="geriTask">${translate("back")}</div>`);   
+const geriTask = document.getElementsByClassName('geriTask')[0];
+geriTask.addEventListener('click', () => {
+noteBar.style.visibility = 'visible';
+noteBar.style.display = 'grid';
+noteBar.style.width = '100%';
+noteContentIc.style.display = 'none';
+noteContent.style.display = 'none';
+});         
+}
+function openTaskModal() {
+    const modal = document.createElement('div');
+    modal.classList.add('modal');
+    modal.innerHTML = `
+        <div class="modal-content">
+            <div id="taskModalContent"></div>
+            <button class="alt_gorev_ekle">${translate("add_subtask")}</button>
+            <div class="colors">
+                <div class="color-option" style="background-color: #b1653d;" data-color="b1653d"></div>
+                <div class="color-option" style="background-color: #9a900b;" data-color="9a900b"></div>
+                <div class="color-option" style="background-color: #6c8f20;" data-color="6c8f20"></div>
+                <div class="color-option" style="background-color: #1490b5;" data-color="1490b5"></div>
+                <div class="color-option" style="background-color: #1b86f2;" data-color="1b86f2"></div>
+                <div class="color-option" style="background-color: #527cf8;" data-color="527cf8"></div>
+                <div class="color-option" style="background-color: #8772ff;" data-color="8772ff"></div>
+                <div class="color-option" style="background-color: #b34e99;" data-color="b34e99"></div>
+                <div class="color-option" style="background-color: #bb4141;" data-color="bb4141"></div>
+            </div>
+            <button id="saveTasksButton" class="delete-confirm">${translate("save")}</button>
+            <button id="cancelTasksButton" class="delete-cancel">${translate("cancel")}</button>
+        </div>`;
+    document.body.appendChild(modal);
+    const saveTasksButton = document.getElementById('saveTasksButton');
+    const cancelTasksButton = document.getElementById('cancelTasksButton');
+    const taskModalContent = document.getElementById('taskModalContent');
+    const colorOptions = modal.querySelectorAll('.color-option');
+    let selectedColor = 'b1653d';
+    colorOptions.forEach(option => {
+        option.addEventListener('click', () => {
+            document.querySelectorAll('.color-option').forEach(opt => opt.classList.remove('selected'));
+            option.classList.add('selected');
+            selectedColor = option.getAttribute('data-color');
+        });
     });
-    function onMouseMove(e) {
-        const tooltips = document.querySelectorAll('.tooltip');
-        for (const tooltip of tooltips) {
-            tooltip.removeAttribute('style');
+    colorOptions[0].classList.add('selected');
+    const taskContainer = document.createElement('div');
+    taskContainer.classList.add('task_container');
+    const taskInput = document.createElement('textarea');
+    taskInput.placeholder = translate("what_to_do");
+    const dateInput = document.createElement('input');
+    dateInput.type = 'date';
+    const dateWrapper = dateDesign(dateInput);
+    const subTasksContainer = document.createElement('div');
+    subTasksContainer.classList.add('subtasks_container');
+    taskContainer.appendChild(taskInput);
+    taskContainer.appendChild(dateWrapper);
+    taskContainer.appendChild(subTasksContainer);
+    taskModalContent.appendChild(taskContainer);
+    taskInput.focus();
+    const subTaskButton = document.querySelector('.alt_gorev_ekle');
+    subTaskButton.addEventListener('click', () => {
+        const subTaskWrapper = createNewSubTaskWrapper();
+        subTasksContainer.appendChild(subTaskWrapper);
+    subTaskWrapper.querySelector('textarea').focus();
+    });
+    saveTasksButton.addEventListener('click', () => {
+        const taskName = taskInput.value.trim();
+        if (!taskName) {
+            alert(translate("task_name_cannot_be_empty"));
+            return;
         }
-        if (!draggingEle || !currentSortable) return;
-        const deltaX = Math.abs(e.clientX - startX);
-        const deltaY = Math.abs(e.clientY - startY);
-        if (!isDragging && (deltaX > 5 || deltaY > 5)) {
-            isDragging = true;
-            draggingEle.remove();
+        const subTasks = [];
+        subTasksContainer.querySelectorAll('.subtask_wrapper').forEach(subTaskWrapper => {
+            const subTaskName = subTaskWrapper.querySelector('textarea').value;
+            const subTaskDate = subTaskWrapper.querySelector('input[type="date"]').value;
+const subTaskId = Date.now() + Math.floor(Math.random() * 1000); 
+            subTasks.push({ name: subTaskName, date: subTaskDate, id: subTaskId, task_completed: 0 });
+        });
+        const newTask = {
+            name: taskName,
+            date: dateInput.value,
+            color: selectedColor,
+            task_completed: 0,
+            id: Date.now(),
+            subTasks
+        };
+        if (selectedNote && selectedNote.task_content !== null) {
+            selectedNote.task_content.unshift(newTask);
+            saveData(false);
+            renderNotes();
+            loadNoteContent();
         }
-        if (isDragging) {
-            dragPreviewEl.style.left = `${e.clientX - offsetX}px`;
-            dragPreviewEl.style.top = `${e.clientY - offsetY}px`;
-            const target = document.elementFromPoint(e.clientX, e.clientY);
-            const targetRow = target?.closest('li');
-        if (targetRow && targetRow !== draggingEle && targetRow.parentNode === currentSortable) {
-            const rect = targetRow.getBoundingClientRect();
-            const next = (e.clientY - rect.top) / (rect.bottom - rect.top) > 0.5;
-            if (e.clientY < startY) { 
-                if (!placeholder) {
-                    placeholder = document.createElement('li');
-                    placeholder.classList.add('placeholder');
-                    currentSortable.insertBefore(placeholder, targetRow);
-                } else {
-                    currentSortable.insertBefore(placeholder, targetRow);
-                }
-            } else { 
-                if (!placeholder) {
-                    placeholder = document.createElement('li');
-                    placeholder.classList.add('placeholder');
-                    currentSortable.insertBefore(placeholder, next ? targetRow.nextSibling : targetRow);
-                } else {
-                    currentSortable.insertBefore(placeholder, next ? targetRow.nextSibling : targetRow);
-                }
+        document.body.removeChild(modal);
+    });
+    cancelTasksButton.addEventListener('click', () => document.body.removeChild(modal));
+}
+function createDateWrapper(dateInput, initialDate) {
+    const dateWrapper = document.createElement('div');
+    dateWrapper.style.position = 'relative';
+    const dateLabel = document.createElement('span');
+    dateLabel.classList.add('date_span');
+    const today = new Date();
+    today.setHours(0, 0, 0, 0);
+    const initialDateTime = new Date(initialDate);
+    initialDateTime.setHours(0, 0, 0, 0);
+    dateLabel.textContent = initialDateTime.getTime() === today.getTime() ? translate("today") : initialDate;
+    dateInput.addEventListener('change', (e) => {
+        const selectedDate = new Date(e.target.value);
+        selectedDate.setHours(0, 0, 0, 0);
+        dateLabel.textContent = selectedDate.getTime() === today.getTime() ? translate("today") : e.target.value;
+    });
+    dateWrapper.appendChild(dateInput);
+    dateWrapper.appendChild(dateLabel);
+    return dateWrapper;
+}
+function createSubTaskWrapper(subTask) {
+    const subTaskWrapper = document.createElement('div');
+    subTaskWrapper.classList.add('subtask_wrapper');
+    const subTaskInput = document.createElement('textarea');
+    subTaskInput.placeholder = translate("what_to_do");
+    subTaskInput.value = subTask.name;
+    const subTaskDate = document.createElement('input');
+    subTaskDate.type = 'date';
+    subTaskDate.value = subTask.date;
+    const dateWrapper = createDateWrapper(subTaskDate, subTask.date);
+    const deleteButton = document.createElement('button');
+    deleteButton.classList.add('delete-subtask-button-modal');
+    deleteButton.addEventListener('click', () => subTaskWrapper.remove());
+    subTaskWrapper.appendChild(deleteButton);
+    subTaskWrapper.appendChild(subTaskInput);
+    subTaskWrapper.appendChild(dateWrapper);
+    return subTaskWrapper;
+}
+function createNewSubTaskWrapper() {
+    const subTaskWrapper = document.createElement('div');
+    subTaskWrapper.classList.add('subtask_wrapper');
+    const subTaskInput = document.createElement('textarea');
+    subTaskInput.placeholder = translate("what_to_do");
+    const subTaskDate = document.createElement('input');
+    subTaskDate.type = 'date';
+    const dateWrapper = dateDesign(subTaskDate);
+    const deleteButton = document.createElement('button');
+    deleteButton.classList.add('delete-subtask-button-modal');
+    deleteButton.addEventListener('click', () => subTaskWrapper.remove());
+    subTaskWrapper.appendChild(deleteButton);
+    subTaskWrapper.appendChild(subTaskInput);
+    subTaskWrapper.appendChild(dateWrapper);
+    return subTaskWrapper;
+}
+function openTaskModalForEdit(task) {
+    const modal = document.createElement('div');
+    modal.classList.add('modal');
+    modal.innerHTML = `
+        <div class="modal-content">
+            <div id="taskModalContent"></div>
+            <button class="alt_gorev_ekle">${translate("add_subtask")}</button>
+            <div class="colors">
+                <div class="color-option" style="background-color: #b1653d;" data-color="b1653d"></div>
+                <div class="color-option" style="background-color: #9a900b;" data-color="9a900b"></div>
+                <div class="color-option" style="background-color: #6c8f20;" data-color="6c8f20"></div>
+                <div class="color-option" style="background-color: #1490b5;" data-color="1490b5"></div>
+                <div class="color-option" style="background-color: #1b86f2;" data-color="1b86f2"></div>
+                <div class="color-option" style="background-color: #527cf8;" data-color="527cf8"></div>
+                <div class="color-option" style="background-color: #8772ff;" data-color="8772ff"></div>
+                <div class="color-option" style="background-color: #b34e99;" data-color="b34e99"></div>
+                <div class="color-option" style="background-color: #bb4141;" data-color="bb4141"></div>
+            </div>
+            <button id="saveTasksButton" class="delete-confirm">${translate("save")}</button>
+            <button id="cancelTasksButton" class="delete-cancel">${translate("cancel")}</button>
+        </div>`;
+    document.body.appendChild(modal);
+
+    const saveTasksButton = document.getElementById('saveTasksButton');
+    const cancelTasksButton = document.getElementById('cancelTasksButton');
+    const taskModalContent = document.getElementById('taskModalContent');
+    const colorOptions = modal.querySelectorAll('.color-option');
+    
+    // Renk seçimi yönetimi
+    let selectedColor = task.color || 'b1653d';
+    colorOptions.forEach(option => {
+        if (option.getAttribute('data-color') === selectedColor) {
+            option.classList.add('selected');
+        }
+        option.addEventListener('click', () => {
+            colorOptions.forEach(opt => opt.classList.remove('selected'));
+            option.classList.add('selected');
+            selectedColor = option.getAttribute('data-color');
+        });
+    });
+
+    // Task container oluşturma
+    const taskContainer = document.createElement('div');
+    taskContainer.classList.add('task_container');
+
+    // Task input alanı
+    const taskInput = document.createElement('textarea');
+    taskInput.placeholder = translate("what_to_do");
+    taskInput.value = task.name;
+
+    // Tarih input alanı
+    const dateInput = document.createElement('input');
+    dateInput.type = 'date';
+    dateInput.value = task.date;
+    const dateWrapper = createDateWrapper(dateInput, task.date);
+
+    // Alt görevler container
+    const subTasksContainer = document.createElement('div');
+    subTasksContainer.classList.add('subtasks_container');
+
+    // Mevcut alt görevleri ekle
+    if (task.subTasks && Array.isArray(task.subTasks)) {
+        task.subTasks.forEach(subTask => {
+            const subTaskWrapper = createSubTaskWrapper(subTask);
+            subTasksContainer.appendChild(subTaskWrapper);
+        });
+    }
+
+    // Container'a elementleri ekle
+    taskContainer.appendChild(taskInput);
+    taskContainer.appendChild(dateWrapper);
+    taskContainer.appendChild(subTasksContainer);
+    taskModalContent.appendChild(taskContainer);
+
+    // Alt görev ekleme butonu
+    const subTaskButton = modal.querySelector('.alt_gorev_ekle');
+    subTaskButton.addEventListener('click', () => {
+        const subTaskWrapper = createNewSubTaskWrapper();
+        subTasksContainer.appendChild(subTaskWrapper);
+    subTaskWrapper.querySelector('textarea').focus();
+    });
+
+    saveTasksButton.addEventListener('click', () => {
+        const updatedTaskName = taskInput.value.trim();
+        if (!updatedTaskName) {
+            alert(translate("task_name_cannot_be_empty"));
+            return;
+        }
+        const taskIndex = selectedNote.task_content.findIndex(t => 
+            t.name === task.name && 
+            t.date === task.date && 
+            t.color === task.color
+        );
+
+        if (taskIndex === -1) {
+            return;
+        }
+
+ // Alt görevleri topla
+    const updatedSubTasks = Array.from(subTasksContainer.querySelectorAll('.subtask_wrapper')).map((wrapper, index) => {
+        const subTaskInput = wrapper.querySelector('textarea');
+        const subTaskDate = wrapper.querySelector('input[type="date"]');
+        let subTaskId;
+        if (task.subTasks && task.subTasks[index] && task.subTasks[index].id) {
+            subTaskId = task.subTasks[index].id;
+        } else {
+            subTaskId = Date.now() + Math.floor(Math.random() * 1000);
+        }
+        return {
+            name: subTaskInput.value.trim(),
+            date: subTaskDate.value,
+            id: subTaskId,
+            task_completed: 0
+            };
+        });
+        selectedNote.task_content[taskIndex] = {
+            ...selectedNote.task_content[taskIndex],
+            name: updatedTaskName,
+            date: dateInput.value,
+            color: selectedColor,
+            subTasks: updatedSubTasks
+        };
+
+        saveData(false);
+        renderNotes();
+        loadNoteContent();
+        document.body.removeChild(modal);
+    });
+
+    cancelTasksButton.addEventListener('click', () => document.body.removeChild(modal));
+}
+function openSubTaskModalForEdit(parentTask, subTask) {
+    const modal = document.createElement('div');
+    modal.classList.add('modal');
+    modal.innerHTML = `
+        <div class="modal-content">
+            <div id="subTaskModalContent"></div>
+            <button id="saveSubTaskButton" class="delete-confirm">${translate("save")}</button>
+            <button id="cancelSubTaskButton" class="delete-cancel">${translate("cancel")}</button>
+        </div>`;
+    document.body.appendChild(modal);
+
+    const modalContent = document.getElementById('subTaskModalContent');
+    const subTaskInput = document.createElement('textarea');
+    subTaskInput.placeholder = translate("what_to_do");
+    
+    let taskToEdit, subTaskToEdit;
+    
+    if (subTask.originalTaskIndex !== undefined) {
+        // Bağımsız alt görev düzenleme
+        taskToEdit = selectedNote.task_content[subTask.originalTaskIndex];
+        if (!taskToEdit || !taskToEdit.subTasks || subTask.originalSubTaskIndex >= taskToEdit.subTasks.length) {
+            alert('Düzenlenecek alt görev bulunamadı.');
+            document.body.removeChild(modal);
+            return;
+        }
+        subTaskToEdit = taskToEdit.subTasks[subTask.originalSubTaskIndex];
+        subTaskInput.value = subTaskToEdit.name;
+    } else {
+        // Normal alt görev düzenleme
+        taskToEdit = parentTask;
+        const subTaskIndex = taskToEdit.subTasks.findIndex(st => 
+            st.name === subTask.name && st.date === subTask.date && st.id === subTask.id && st.task_completed === subTask.task_completed
+        );
+        if (subTaskIndex === -1) {
+            alert('Düzenlenecek alt görev bulunamadı.');
+            document.body.removeChild(modal);
+            return;
+        }
+        subTaskToEdit = taskToEdit.subTasks[subTaskIndex];
+        subTaskInput.value = subTaskToEdit.name;
+    }
+
+    const dateInput = document.createElement('input');
+    dateInput.type = 'date';
+    dateInput.value = subTaskToEdit.date;
+    const dateWrapper = createDateWrapper(dateInput, dateInput.value);
+
+    modalContent.appendChild(subTaskInput);
+    modalContent.appendChild(dateWrapper);
+
+    document.getElementById('saveSubTaskButton').addEventListener('click', () => {
+        const newName = subTaskInput.value.trim();
+        if (!newName) {
+            alert(translate("task_name_cannot_be_empty"));
+            return;
+        }
+        subTaskToEdit.name = newName;
+        subTaskToEdit.date = dateInput.value;
+        saveData(false);
+        renderNotes();
+        loadNoteContent();
+        document.body.removeChild(modal);
+    });
+
+    document.getElementById('cancelSubTaskButton').addEventListener('click', () => {
+        document.body.removeChild(modal);
+    });
+}
+function deleteTask(task) {
+    if (task.isSubTask) {
+        const parentTask = selectedNote.task_content[task.originalTaskIndex];
+        if (parentTask && parentTask.subTasks) {
+            parentTask.subTasks = parentTask.subTasks.filter((_, index) => index !== task.originalSubTaskIndex);
+            if (parentTask.subTasks.length === 0 && parentTask.task_completed === 1) {
+                selectedNote.task_content = selectedNote.task_content.filter((_, index) => index !== task.originalTaskIndex);
             }
-        } else if (!targetRow) {
-            if (!placeholder) {
-                placeholder = document.createElement('li');
-                placeholder.classList.add('placeholder');
-                currentSortable.appendChild(placeholder);
-            }
         }
+    } else {
+        const taskIndex = task.originalTaskIndex;
+        if (taskIndex !== undefined && taskIndex >= 0) {
+            selectedNote.task_content.splice(taskIndex, 1);
         }
     }
-    function onMouseUp() {
-        const tooltips = document.querySelectorAll('.tooltip');
-        for (const tooltip of tooltips) {
-            tooltip.removeAttribute('style');
+    if (selectedNote && task.id) {
+        const tabTypes = ['active', 'today', 'overdue', 'completed'];
+        tabTypes.forEach(tabType => {
+            const key = `taskOrder-${tabType}-${selectedNote.id}`;
+            const savedTaskOrder = localStorage.getItem(key);
+            if (savedTaskOrder) {
+                let taskOrder = JSON.parse(savedTaskOrder);
+                if (Array.isArray(taskOrder)) {
+                    taskOrder = taskOrder.filter(id => id.toString() !== task.id.toString());
+                    if (taskOrder.length > 1) {
+                        localStorage.setItem(key, JSON.stringify(taskOrder));
+                    } else {
+                        localStorage.removeItem(key); 
+                    }
+                }
+            }
+        });
+    }
+
+    saveData(false);
+    highlightTabsWithContent();
+}
+function deleteSubTask(task, subTask) {
+    const taskIndex = task.originalTaskIndex;
+    if (taskIndex !== undefined && taskIndex >= 0 && taskIndex < selectedNote.task_content.length) {
+        const parentTask = selectedNote.task_content[taskIndex];
+        const subTaskIndex = parentTask.subTasks.findIndex(st => 
+            st.name === subTask.name && st.date === subTask.date && st.task_completed === subTask.task_completed
+        );
+        if (subTaskIndex !== -1) {
+            parentTask.subTasks.splice(subTaskIndex, 1);
+            if (parentTask.subTasks.length === 0 && parentTask.task_completed === 1) {
+                selectedNote.task_content.splice(taskIndex, 1);
+            }
+
+            // Tüm tabType'lar için taskOrder güncellemesi
+            if (selectedNote && subTask.id) {
+                const tabTypes = ['active', 'today', 'overdue', 'completed'];
+                tabTypes.forEach(tabType => {
+                    const key = `taskOrder-${tabType}-${selectedNote.id}`;
+                    const savedTaskOrder = localStorage.getItem(key);
+                    if (savedTaskOrder) {
+                        let taskOrder = JSON.parse(savedTaskOrder);
+                        if (Array.isArray(taskOrder)) {
+                            taskOrder = taskOrder.filter(id => id.toString() !== subTask.id.toString());
+                            if (taskOrder.length > 1) {
+                                localStorage.setItem(key, JSON.stringify(taskOrder));
+                            } else {
+                                localStorage.removeItem(key); // Liste boş veya tek elemanlıysa anahtarı sil
+                            }
+                        }
+                    }
+                });
+            }
+
+            saveData(false);
+            highlightTabsWithContent();
         }
+    }
+}
+function addNote(isTask = false) {
+    const modal = document.createElement('div');
+    modal.classList.add('modal');
+const labelContent = isTask ? translate("task_title") : translate("note_title");
+const alertContent = isTask ? translate("task_title_cannot_be_empty") : translate("note_title_empty");
+    modal.innerHTML = `
+        <div class="modal-content">
+            <label for="newNoteTitle">${labelContent}</label>
+            <input type="text" id="newNoteTitle">
+            <div class="colors"> 
+                <div class="color-option" style="background-color: #b1653d;" data-color="b1653d"></div>
+                <div class="color-option" style="background-color: #9a900b;" data-color="9a900b"></div>
+                <div class="color-option" style="background-color: #6c8f20;" data-color="6c8f20"></div>
+                <div class="color-option" style="background-color: #1490b5;" data-color="1490b5"></div>
+                <div class="color-option" style="background-color: #1b86f2;" data-color="1b86f2"></div>
+                <div class="color-option" style="background-color: #527cf8;" data-color="527cf8"></div>
+                <div class="color-option" style="background-color: #8772ff;" data-color="8772ff"></div>
+                <div class="color-option" style="background-color: #b34e99;" data-color="b34e99"></div>
+                <div class="color-option" style="background-color: #bb4141;" data-color="bb4141"></div>
+            </div>
+            <button id="confirmDelete">${translate("add")}</button>
+            <button id="cancelDelete">${translate("cancel")}</button>
+        </div>`;
+    document.body.appendChild(modal);
+    const newNoteTitleInput = document.getElementById('newNoteTitle');
+    const confirmDelete = document.getElementById('confirmDelete');
+    const cancelDelete = document.getElementById('cancelDelete');
+    const colorOptions = document.querySelectorAll('.color-option');
+    let selectedColor = 'b1653d';
+    colorOptions.forEach(option => {
+        option.addEventListener('click', () => {
+            document.querySelectorAll('.color-option').forEach(opt => opt.classList.remove('selected'));
+            option.classList.add('selected');
+            selectedColor = option.getAttribute('data-color');
+        });
+    });
+    colorOptions[0].classList.add('selected');
+    newNoteTitleInput.focus();
+    confirmDelete.addEventListener('click', () => {
+        const title = newNoteTitleInput.value.trim();
+        if (!title) {
+            alert(alertContent);
+            return;
+        }
+        if (!localStorage.getItem('categories') || localStorage.getItem('categories').trim() === '') {
+            alert(translate("please_add_category_first"));
+            return;
+        }
+        const newNote = {
+            id: Date.now().toString(),
+            title: title,
+            color: selectedColor,
+            task_content: isTask ? [] : null,
+            content: isTask ? '' : null,
+            categories: selectedCategory ? [selectedCategory.id] : [],
+            createdAt: new Date().toISOString()
+        };
+        notes.unshift(newNote);
+        selectedNote = newNote;
+        saveData(false);
+        renderNotes();
+        loadNoteContent();
+        noteContentIc.style.display = 'block';
+        document.body.removeChild(modal);
+        if (isTask) setupTaskUI();
+    });
+    cancelDelete.addEventListener('click', () => document.body.removeChild(modal));
+    newNoteTitleInput.addEventListener('keydown', (event) => {
+        if (event.key === 'Enter') confirmDelete.click();
+    });
+}
+function enableDragAndDrop(sortableClass, listId, updateOrderCallback, rowSelector = 'li') {
+    const sortables = document.querySelectorAll(sortableClass);
+
+    let draggingEle = null;        // Sürüklenen eleman
+    let placeholder = null;        // Yer tutucu eleman
+    let dragPreviewEl = null;      // Sürükleme önizleme elemanı
+    let currentSortable = null;    // Şu anki sıralanabilir alan
+    let isDragging = false;        // Sürükleme aktif mi?
+    let startX = 0;                // Başlangıç X koordinatı
+    let startY = 0;                // Başlangıç Y koordinatı
+    let offsetX = 0;               // X ekseninde kayma
+    let offsetY = 0;               // Y ekseninde kayma
+    let touchStartTime = 0;        // Dokunma başlangıç zamanı
+    let touchMoved = false;        // Dokunma sırasında hareket oldu mu?
+    let isTouchEvent = false;      // Dokunma olayı mı?
+
+    // Tüm sıralanabilir elemanlara olay dinleyicileri ekle
+    sortables.forEach(sortable => {
+        const rows = sortable.querySelectorAll(rowSelector);
+        rows.forEach(row => {
+            // Hem mouse hem de dokunmatik olayları dinle
+            row.addEventListener('mousedown', startDrag);
+            row.addEventListener('touchstart', startDrag, { passive: false });
+        });
+    });
+
+    function startDrag(e) {
+        e.stopPropagation();
+
+        // Arama aktifse sürüklemeyi engelle
+        const lang = document.documentElement.lang;
+        const searchTerm = lang === "tr" ? noteSearchInput.value.turkishToLower() : noteSearchInput.value.toLowerCase();
+        const contentSearchTerm = lang === "tr" ? noteContentSearchInput.value.turkishToLower() : noteContentSearchInput.value.toLowerCase();
+        const isSearchActive = searchTerm || contentSearchTerm;
+        if (isSearchActive) {
+            e.preventDefault();
+            return;
+        }
+
+        // Tooltip'leri gizle
+        document.querySelectorAll('.tooltip').forEach(tooltip => tooltip.removeAttribute('style'));
+
+        draggingEle = this;
+        currentSortable = draggingEle.closest(sortableClass);
+        currentListId = listId;
+
+        // Olay tipini kontrol et
+        isTouchEvent = e.type === 'touchstart';
+        
+        // Koordinatları al (mouse veya touch)
+        startX = isTouchEvent ? e.touches[0].clientX : e.clientX;
+        startY = isTouchEvent ? e.touches[0].clientY : e.clientY;
+
+        const spanElement = draggingEle.querySelector('span');
+        if (spanElement && spanElement.parentElement) {
+            spanElement.parentElement.classList.add('dragging');
+        }
+
+        const rect = draggingEle.getBoundingClientRect();
+        offsetX = startX - rect.left;
+        offsetY = startY - rect.top;
+
+        // Sürükleme önizleme elemanı oluştur
+        dragPreviewEl = draggingEle.cloneNode(true);
+        dragPreviewEl.id = "drag-preview";
+        dragPreviewEl.style.position = "fixed"; // Mobil için fixed daha stabil
+        dragPreviewEl.style.left = `${rect.left}px`;
+        dragPreviewEl.style.top = `${rect.top}px`;
+        dragPreviewEl.style.width = `${rect.width}px`;
+        dragPreviewEl.style.pointerEvents = "none";
+        dragPreviewEl.style.zIndex = "1000"; // Üstte kalmasını sağla
+        document.body.appendChild(dragPreviewEl);
+
+        // Dokunma başlangıç zamanını kaydet
+        touchStartTime = new Date().getTime();
+        touchMoved = false;
+
+        // Olay dinleyicilerini ekle
+        document.addEventListener('mousemove', onMove);
+        document.addEventListener('touchmove', onMove, { passive: false });
+        document.addEventListener('mouseup', onEnd);
+        document.addEventListener('touchend', onEnd);
+
+        // Dokunmatik olaylarda varsayılan davranışı engelle
+        if (isTouchEvent) {
+            e.preventDefault();
+        }
+    }
+
+    function onMove(e) {
+        document.querySelectorAll('.tooltip').forEach(tooltip => tooltip.removeAttribute('style'));
+
+        const clientX = e.type === 'touchmove' ? e.touches[0].clientX : e.clientX;
+        const clientY = e.type === 'touchmove' ? e.touches[0].clientY : e.clientY;
+
+        const deltaX = Math.abs(clientX - startX);
+        const deltaY = Math.abs(clientY - startY);
+
+        if (!isDragging && (deltaX > 5 || deltaY > 5)) {
+            isDragging = true;
+            touchMoved = true; // Hareket algılandı
+            draggingEle.style.visibility = 'hidden'; 
+            draggingEle.style.height = '0';
+            draggingEle.style.padding = '0';
+        }
+
+        if (isDragging) { 
+            // Önizleme pozisyonunu güncelle
+            dragPreviewEl.style.left = `${clientX - offsetX}px`;
+            dragPreviewEl.style.top = `${clientY - offsetY}px`;
+
+            // Hedef konumu bul ve yer tutucuyu güncelle
+            const target = document.elementFromPoint(clientX, clientY);
+            const targetRow = target?.closest(rowSelector);
+
+            if (targetRow && targetRow !== draggingEle && targetRow.parentNode === currentSortable) {
+                const rect = targetRow.getBoundingClientRect();
+                const next = (clientY - rect.top) > (rect.height / 2);
+
+                if (!placeholder) {
+                    placeholder = document.createElement('div');
+                    placeholder.classList.add('placeholder');
+                }
+
+                if (next) {
+                    currentSortable.insertBefore(placeholder, targetRow.nextSibling);
+                } else {
+                    currentSortable.insertBefore(placeholder, targetRow);
+                }
+            }
+        }
+
+        // Dokunmatik olaylarda varsayılan davranışı engelle
+        if (e.type === 'touchmove') {
+            e.preventDefault();
+        }
+    }
+
+    function onEnd(e) {
         if (!draggingEle || !currentSortable) return;
+
+        document.querySelectorAll('.tooltip').forEach(tooltip => tooltip.removeAttribute('style'));
+
         if (isDragging) {
+            draggingEle.removeAttribute('style');
             if (placeholder) {
                 currentSortable.insertBefore(draggingEle, placeholder);
-                currentSortable.removeChild(placeholder);
+                placeholder.remove();
                 placeholder = null;
             } else {
                 currentSortable.appendChild(draggingEle);
             }
-            if (currentSortable.id === listId) {
+
+            if (currentListId === listId) {
                 updateOrderCallback();
             }
+        } else {
+            // Sadece dokunmatik cihazlarda tıklama olayını tetikle
+            const touchEndTime = new Date().getTime();
+            if (isTouchEvent && !touchMoved && (touchEndTime - touchStartTime < 300)) {
+                const originalTarget = document.elementFromPoint(startX, startY);
+                if (originalTarget) {
+                    const clickEvent = new MouseEvent('click', {
+                        view: window,
+                        bubbles: true,
+                        cancelable: true
+                    });
+                    originalTarget.dispatchEvent(clickEvent); 
+                }
+            }
         }
+
         const spanElement = draggingEle.querySelector('span');
-        if (spanElement) {spanElement.classList.remove('dragging');}
-        if (dragPreviewEl) {document.body.removeChild(dragPreviewEl);}
-        if (tempPlaceholder) {currentSortable.removeChild(tempPlaceholder);tempPlaceholder = null;}
-        document.removeEventListener('mousemove', onMouseMove);
-        document.removeEventListener('mouseup', onMouseUp);
+        if (spanElement && spanElement.parentElement) {
+            spanElement.parentElement.classList.remove('dragging');
+        }
+        if (dragPreviewEl) {
+            dragPreviewEl.remove();
+            dragPreviewEl = null;
+        }
+        document.removeEventListener('mousemove', onMove);
+        document.removeEventListener('touchmove', onMove);
+        document.removeEventListener('mouseup', onEnd);
+        document.removeEventListener('touchend', onEnd);
+
         draggingEle = null;
         currentSortable = null;
         isDragging = false;
+        currentListId = null;
     }
+}
+function updateTaskOrder(tabType) {
+    const taskListContainer = document.querySelector('.task-list');
+    if (!taskListContainer) return;
+
+    // Görevlerin ve bağımsız alt görevlerin sırasını güncelle
+    const taskElements = taskListContainer.querySelectorAll('.task_list_container');
+    const taskOrder = Array.from(taskElements).map(el => el.dataset.id);
+    localStorage.setItem(`taskOrder-${tabType}-${selectedNote.id}`, JSON.stringify(taskOrder));
+
+    // Her görev için alt görevlerin sırasını güncelle
+    selectedNote.task_content.forEach(task => {
+        if (task.subTasks && task.subTasks.length > 0) {
+            const subTaskContainer = document.querySelector(`.task_list_container[data-id="${task.id}"] .subtasks_list_container`);
+            if (subTaskContainer) {
+                const subTaskElements = subTaskContainer.querySelectorAll('.subtask_list_wrapper');
+                const subTaskOrder = Array.from(subTaskElements).map(el => el.dataset.id);
+
+                // ID'si undefined veya null olan alt görevleri filtrele
+                task.subTasks = task.subTasks.filter(subTask => subTask.id !== undefined && subTask.id !== null);
+
+                // subTaskOrder'a göre alt görevleri sırala
+                task.subTasks.sort((a, b) => {
+                    const indexA = subTaskOrder.indexOf(a.id.toString());
+                    const indexB = subTaskOrder.indexOf(b.id.toString());
+                    return indexA - indexB;
+                });
+            }
+        }
+    });
+
+    // Veriyi kaydet
+    saveData(false);
 }
 function updateCategoryOrder() {
     const categoryList = document.getElementById('category-list');
@@ -1344,7 +2528,6 @@ function editCategory(category) {
   modal.classList.add('modal');
   modal.innerHTML = `
     <div class="modal-content">
-      <label for="newCategoryName">${translate("category_name")}:</label>
       <input type="text" id="newCategoryName" value="${category.name}">
       <div class="colors">
         <div class="color-option" style="background-color: #b1653d;" data-color="b1653d"></div>
@@ -1414,7 +2597,6 @@ function editNote(note) {
   modal.classList.add('modal');
   modal.innerHTML = `
     <div class="modal-content">
-      <label for="newCategoryName">${translate("note_title")}</label>
       <input type="text" id="newCategoryName" value="${note.title}">
       <div class="colors">
         <div class="color-option" style="background-color: #b1653d;" data-color="b1653d"></div>
@@ -1542,9 +2724,9 @@ const windowWidth = window.innerWidth;
 }
 function deleteNote(note) {
   if (!note || !note.id) {
-    console.error('Invalid note object:', note);
     return;
   }
+
   const modal = document.createElement('div');
   modal.classList.add('modal');
   const modalId = `delete-modal-${note.id}`;
@@ -1557,31 +2739,40 @@ function deleteNote(note) {
     </div>
   `;
   document.body.appendChild(modal);
+
   const confirmDelete = document.getElementById(`confirmDelete-${note.id}`);
   const cancelDelete = document.getElementById(`cancelDelete-${note.id}`);
-const removeAllModal = () => {
-  const allModals = document.querySelectorAll('.modal');
-  allModals.forEach(modalElement => {
-    if (modalElement && modalElement.parentNode) {
-      modalElement.parentNode.removeChild(modalElement);
-    }
-  });
-  document.removeEventListener('keydown', handleKeydown);
-};
-const removeModalChild = () => {
+
+  const removeAllModal = () => {
+    const allModals = document.querySelectorAll('.modal');
+    allModals.forEach(modalElement => {
+      if (modalElement && modalElement.parentNode) {
+        modalElement.parentNode.removeChild(modalElement);
+      }
+    });
+    document.removeEventListener('keydown', handleKeydown);
+  };
+
+  const removeModalChild = () => {
     if (modal && modal.parentNode) {
       modal.parentNode.removeChild(modal);
       document.removeEventListener('keydown', handleKeydown);
     }
   };
+
   const handleDelete = () => {
+    // Notu sil
     notes = notes.filter(n => n.id !== note.id);
+
+    // Not sıralamasını güncelle
     const savedNoteOrder = localStorage.getItem('noteOrder');
     if (savedNoteOrder) {
       let noteOrder = JSON.parse(savedNoteOrder);
       noteOrder = noteOrder.filter(id => id !== note.id);
       localStorage.setItem('noteOrder', JSON.stringify(noteOrder));
     }
+
+    // Kategoriye özel not sıralamasını güncelle
     if (selectedCategory) {
       const savedCategoryNoteOrder = localStorage.getItem(`noteOrder-${selectedCategory.id}`);
       if (savedCategoryNoteOrder) {
@@ -1590,28 +2781,48 @@ const removeModalChild = () => {
         localStorage.setItem(`noteOrder-${selectedCategory.id}`, JSON.stringify(categoryNoteOrder));
       }
     }
+
+    // Silinen nota ait taskOrder- ile başlayan tüm localStorage verilerini temizle
+    const noteId = String(note.id); // note.id'yi string'e çevir
+    for (let i = 0; i < localStorage.length; i++) {
+      const key = localStorage.key(i);
+      if (key.startsWith('taskOrder-') && key.endsWith(`-${noteId}`)) {
+        localStorage.removeItem(key);
+      }
+    }
+
+    // Eğer silinen not seçili not ise, seçimi temizle
     if (selectedNote && selectedNote.id === note.id) {
       selectedNote = null;
       noteContentIc.style.display = 'none';
     }
+
+    // Verileri kaydet ve notları yeniden render et
     saveData(false);
     renderNotes();
-      removeAllModal();
+
+    // Modalı kaldır
+    removeAllModal();
   };
+
   const handleCancel = () => {
-  removeModalChild();
+    removeModalChild();
   };
+
   const handleKeydown = (event) => {
     if (event.key === 'Enter') {
       handleDelete();
     }
   };
+
   confirmDelete.addEventListener('click', handleDelete);
   cancelDelete.addEventListener('click', handleCancel);
   document.addEventListener('keydown', handleKeydown);
+
   const cleanup = () => {
     document.removeEventListener('keydown', handleKeydown);
   };
+
   modal.addEventListener('remove', cleanup);
 }
 function deleteCategory(category) {
@@ -1668,6 +2879,15 @@ const removeModalChild = () => {
       localStorage.setItem('noteOrder', JSON.stringify(noteOrder));
     }
     localStorage.removeItem(`noteOrder-${category.id}`);
+
+    const noteId = String(noteIdsToRemove); 
+    for (let i = 0; i < localStorage.length; i++) {
+      const key = localStorage.key(i);
+      if (key.startsWith('taskOrder-') && key.endsWith(`-${noteId}`)) {
+        localStorage.removeItem(key);
+      }
+    }
+
     saveData(false);
     renderCategories();
     renderNotes();
@@ -1698,7 +2918,8 @@ const removeModalChild = () => {
     noteSearchInput.addEventListener('input', renderNotes);
     noteContentSearchInput.addEventListener('input', renderNotes);
     addCategoryButton.addEventListener('click', addCategory);
-    addNoteButton.addEventListener('click', addNote);
+    addNoteButton.addEventListener('click', () => {addNote(false);});
+    addTaskButton.addEventListener('click', () => {addNote(true);});
     saveNoteButton.addEventListener('click', saveNote);
     deleteNoteButton.addEventListener('click', deleteNoteInContent);
     loadData();
@@ -2185,15 +3406,23 @@ document.addEventListener('DOMContentLoaded', () => {
       categories: JSON.parse(localStorage.getItem('categories')),
       categoryOrder: JSON.parse(localStorage.getItem('categoryOrder')),
       notes: JSON.parse(localStorage.getItem('notes')),
-      sidebarState: localStorage.getItem('sidebarState')
+      sidebarState: localStorage.getItem('sidebarState'),
+      thizaState: localStorage.getItem('thizaState'),
+      selectedLanguage: localStorage.getItem('selectedLanguage')
     };
+    
+    // Get all keys from localStorage
     [...Array(localStorage.length)].forEach((_, i) => {
       const key = localStorage.key(i);
-      if (key?.startsWith('noteOrder-')) {
+      // Handle both noteOrder and taskOrder keys
+      if (key?.startsWith('noteOrder-') || key?.startsWith('taskOrder-')) {
         data[key] = JSON.parse(localStorage.getItem(key));
       }
-    }); return data;
+    });
+    
+    return data;
   };
+  
   document.getElementById('export').addEventListener('click', () => {
     const d = new Date();
     const filename = `notemod-${d.getDate().toString().padStart(2,'0')}.${(d.getMonth()+1).toString().padStart(2,'0')}.${d.getFullYear()}.txt`;
@@ -2203,6 +3432,7 @@ document.addEventListener('DOMContentLoaded', () => {
     a.click();
     URL.revokeObjectURL(a.href);
   });
+  
   document.getElementById('import').addEventListener('click', () => {
     const input = document.createElement('input');
     input.type = 'file';
@@ -2210,16 +3440,29 @@ document.addEventListener('DOMContentLoaded', () => {
     input.addEventListener('change', async e => {
       try {
         const data = JSON.parse(await e.target.files[0].text());
+        
+        // Clear both noteOrder and taskOrder keys
         [...Array(localStorage.length)].forEach((_, i) => {
           const key = localStorage.key(i);
-          if (key?.startsWith('noteOrder-')) localStorage.removeItem(key);
+          if (key?.startsWith('noteOrder-') || key?.startsWith('taskOrder-')) {
+            localStorage.removeItem(key);
+          }
         });
-        Object.entries(data).forEach(([k, v]) => 
-          localStorage.setItem(k, k === 'sidebarState' ? v : JSON.stringify(v))
-        );
+        
+        // Store all data back to localStorage
+        Object.entries(data).forEach(([k, v]) => {
+          // Handle string values vs JSON values
+          if (k === 'sidebarState' || k === 'thizaState' || k === 'selectedLanguage') {
+            localStorage.setItem(k, v);
+          } else {
+            localStorage.setItem(k, JSON.stringify(v));
+          }
+        });
+        
         alert(translate("data_imported_successfully"));
         window.location.reload();
-      } catch {
+      } catch (err) {
+        console.error("Import error:", err);
         alert(translate("invalid_file_format"));
       }
     });
