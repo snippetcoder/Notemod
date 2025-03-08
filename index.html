@@ -742,8 +742,10 @@ location.reload();
     console.log('Gist\'ten veri yükleme hatası:', error);
     if (localStorage.getItem('sync') === '1') {
 document.querySelector('button#sync').classList.remove('aktif');
+setTimeout(() => {
 alert(translate("sync_failed_or_no_data_on_server_check_setup_info"));
       localStorage.setItem('sync', '0');
+}, 150);
     }
   }
 };
