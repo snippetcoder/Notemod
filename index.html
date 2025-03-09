@@ -337,7 +337,6 @@ div#omod_toggle::before,div#omod_toggle:lang(ar)::before,div#omod_toggle:lang(ur
 #omod_toggle:not(.omod #omod_toggle),div#omod_toggle:not(.omod #omod_toggle):lang(ar), div#omod_toggle:not(.omod #omod_toggle):lang(ur), div#omod_toggle:not(.omod #omod_toggle):lang(fa){float: unset;right: auto;display: inline-block;margin-left: 10px;}
 }
 @media screen and (max-width:1000px){
-.task_list_container,.subtask_list_wrapper{touch-action:none;}
 .toolbar button::before,#omod_toggle::before{height: 0;display: none;}
 .modal-content input {width: 100%;}
 button.thiza_button:lang(ar), button.thiza_button:lang(ur), button.thiza_button:lang(fa) {float: right;}
@@ -2453,24 +2452,27 @@ const alertContent = isTask ? translate("task_title_cannot_be_empty") : translat
 function enableDragAndDrop(sortableClass, listId, updateOrderCallback, rowSelector = 'li') {
     const sortables = document.querySelectorAll(sortableClass);
 
-    let draggingEle = null;        // Sürüklenen eleman
-    let placeholder = null;        // Yer tutucu eleman
-    let dragPreviewEl = null;      // Sürükleme önizleme elemanı
-    let currentSortable = null;    // Şu anki sıralanabilir alan
-    let isDragging = false;        // Sürükleme aktif mi?
-    let startX = 0;                // Başlangıç X koordinatı
-    let startY = 0;                // Başlangıç Y koordinatı
-    let offsetX = 0;               // X ekseninde kayma
-    let offsetY = 0;               // Y ekseninde kayma
-    let touchStartTime = 0;        // Dokunma başlangıç zamanı
-    let touchMoved = false;        // Dokunma sırasında hareket oldu mu?
-    let isTouchEvent = false;      // Dokunma olayı mı?
+    let draggingEle = null;     // Sürüklenen eleman
+    let placeholder = null;     // Yer tutucu eleman
+    let dragPreviewEl = null;   // Sürükleme önizleme elemanı
+    let currentSortable = null; // Şu anki sıralanabilir alan
+    let isDragging = false;     // Sürükleme aktif mi?
+    let startX = 0;             // Başlangıç X koordinatı
+    let startY = 0;             // Başlangıç Y koordinatı
+    let offsetX = 0;            // X ekseninde kayma
+    let offsetY = 0;            // Y ekseninde kayma
+    let touchStartTime = 0;     // Dokunma başlangıç zamanı
+    let touchMoved = false;     // Dokunma sırasında hareket oldu mu?
+    let isTouchEvent = false;   // Dokunma olayı mı?
+    let scrollableContainer = null; // Scroll edilebilir container
+    let scrollSpeed = 15;       // Scroll hızı (piksel/frame)
+    let scrollThreshold = 50;   // Scroll eşiği (piksel)
+    let lastClientY = 0;        // Son Y koordinatı
 
-    // Tüm sıralanabilir elemanlara olay dinleyicileri ekle
+    // Sıralanabilir elemanlara olay dinleyicileri ekle
     sortables.forEach(sortable => {
         const rows = sortable.querySelectorAll(rowSelector);
         rows.forEach(row => {
-            // Hem mouse hem de dokunmatik olayları dinle
             row.addEventListener('mousedown', startDrag);
             row.addEventListener('touchstart', startDrag, { passive: false });
         });
@@ -2478,7 +2480,6 @@ function enableDragAndDrop(sortableClass, listId, updateOrderCallback, rowSelect
 
     function startDrag(e) {
         e.stopPropagation();
-
         // Arama aktifse sürüklemeyi engelle
         const lang = document.documentElement.lang;
         const searchTerm = lang === "tr" ? noteSearchInput.value.turkishToLower() : noteSearchInput.value.toLowerCase();
@@ -2495,36 +2496,35 @@ function enableDragAndDrop(sortableClass, listId, updateOrderCallback, rowSelect
         draggingEle = this;
         currentSortable = draggingEle.closest(sortableClass);
         currentListId = listId;
+        // Scroll edilebilir container’ı dinamik olarak bul
+        scrollableContainer = currentSortable; // Varsayılan olarak currentSortable’ı kullan
+        if (scrollableContainer.scrollHeight <= scrollableContainer.clientHeight) {
+            // Eğer currentSortable scroll edilemezse, üstteki scroll edilebilir elementi bul
+            let parent = currentSortable.parentElement;
+            while (parent) {
+                if (parent.scrollHeight > parent.clientHeight) {
+                    scrollableContainer = parent;
+                    break;
+                }
+                parent = parent.parentElement;
+            }
+        }
 
         // Olay tipini kontrol et
         isTouchEvent = e.type === 'touchstart';
-        
-        // Koordinatları al (mouse veya touch)
         startX = isTouchEvent ? e.touches[0].clientX : e.clientX;
         startY = isTouchEvent ? e.touches[0].clientY : e.clientY;
+        lastClientY = startY;
 
-        const spanElement = draggingEle.querySelector('span');
-        if (spanElement && spanElement.parentElement) {
-            spanElement.parentElement.classList.add('dragging');
+
+
+
+
+
+
+        if (isTouchEvent) {
+            touchStartTime = new Date().getTime();
         }
-
-        const rect = draggingEle.getBoundingClientRect();
-        offsetX = startX - rect.left;
-        offsetY = startY - rect.top;
-
-        // Sürükleme önizleme elemanı oluştur
-        dragPreviewEl = draggingEle.cloneNode(true);
-        dragPreviewEl.id = "drag-preview";
-        dragPreviewEl.style.position = "fixed"; // Mobil için fixed daha stabil
-        dragPreviewEl.style.left = `${rect.left}px`;
-        dragPreviewEl.style.top = `${rect.top}px`;
-        dragPreviewEl.style.width = `${rect.width}px`;
-        dragPreviewEl.style.pointerEvents = "none";
-        dragPreviewEl.style.zIndex = "1000"; // Üstte kalmasını sağla
-        document.body.appendChild(dragPreviewEl);
-
-        // Dokunma başlangıç zamanını kaydet
-        touchStartTime = new Date().getTime();
         touchMoved = false;
 
         // Olay dinleyicilerini ekle
@@ -2532,34 +2532,54 @@ function enableDragAndDrop(sortableClass, listId, updateOrderCallback, rowSelect
         document.addEventListener('touchmove', onMove, { passive: false });
         document.addEventListener('mouseup', onEnd);
         document.addEventListener('touchend', onEnd);
-
-        // Dokunmatik olaylarda varsayılan davranışı engelle
-        if (isTouchEvent) {
-            e.preventDefault();
-        }
     }
 
     function onMove(e) {
-        document.querySelectorAll('.tooltip').forEach(tooltip => tooltip.removeAttribute('style'));
-
         const clientX = e.type === 'touchmove' ? e.touches[0].clientX : e.clientX;
         const clientY = e.type === 'touchmove' ? e.touches[0].clientY : e.clientY;
 
         const deltaX = Math.abs(clientX - startX);
         const deltaY = Math.abs(clientY - startY);
 
+        // Sürükleme başlangıcını kontrol et
         if (!isDragging && (deltaX > 5 || deltaY > 5)) {
-            isDragging = true;
-            touchMoved = true; // Hareket algılandı
-            draggingEle.style.visibility = 'hidden'; 
-            draggingEle.style.height = '0';
-            draggingEle.style.padding = '0';
+            const currentTime = new Date().getTime();
+            const timeElapsed = isTouchEvent ? currentTime - touchStartTime : 0;
+            if (!isTouchEvent || (isTouchEvent && timeElapsed >= 1000)) {
+        const spanElement = draggingEle.querySelector('span');
+        if (spanElement && spanElement.parentElement) {
+            spanElement.parentElement.classList.add('dragging');
+        }
+        const rect = draggingEle.getBoundingClientRect();
+        offsetX = startX - rect.left;
+        offsetY = startY - rect.top;
+        // Sürükleme önizleme elemanı oluştur
+        dragPreviewEl = draggingEle.cloneNode(true);
+        dragPreviewEl.id = "drag-preview";
+        dragPreviewEl.style.position = "fixed";
+        dragPreviewEl.style.left = `${rect.left}px`;
+        dragPreviewEl.style.top = `${rect.top}px`;
+        dragPreviewEl.style.width = `${rect.width}px`;
+        dragPreviewEl.style.pointerEvents = "none";
+        dragPreviewEl.style.zIndex = "1000";
+        document.body.appendChild(dragPreviewEl);
+
+                isDragging = true;
+                touchMoved = true;
+                draggingEle.style.visibility = 'hidden';
+                draggingEle.style.height = '0';
+                draggingEle.style.padding = '0';
+            }
         }
 
-        if (isDragging) { 
+        if (isDragging) {
             // Önizleme pozisyonunu güncelle
             dragPreviewEl.style.left = `${clientX - offsetX}px`;
             dragPreviewEl.style.top = `${clientY - offsetY}px`;
+
+            // Scroll’u sürekli ayarla
+            lastClientY = clientY;
+            requestAnimationFrame(() => adjustScroll(clientY));
 
             // Hedef konumu bul ve yer tutucuyu güncelle
             const target = document.elementFromPoint(clientX, clientY);
@@ -2581,16 +2601,31 @@ function enableDragAndDrop(sortableClass, listId, updateOrderCallback, rowSelect
                 }
             }
         }
+    }
 
-        // Dokunmatik olaylarda varsayılan davranışı engelle
-        if (e.type === 'touchmove') {
-            e.preventDefault();
+    function adjustScroll(clientY) {
+        if (!scrollableContainer || !isDragging) return;
+
+        const containerRect = scrollableContainer.getBoundingClientRect();
+        const topThreshold = containerRect.top + scrollThreshold;
+        const bottomThreshold = containerRect.bottom - scrollThreshold;
+
+        // Öğe yukarı sürükleniyorsa scroll aşağı gider (scrollTop azalır)
+        if (clientY < topThreshold) {
+            const distance = topThreshold - clientY;
+            const speed = Math.min(scrollSpeed * (distance / scrollThreshold), scrollSpeed * 2);
+            scrollableContainer.scrollTop -= speed;
+        }
+        // Öğe aşağı sürükleniyorsa scroll yukarı gider (scrollTop artar)
+        else if (clientY > bottomThreshold) {
+            const distance = clientY - bottomThreshold;
+            const speed = Math.min(scrollSpeed * (distance / scrollThreshold), scrollSpeed * 2);
+            scrollableContainer.scrollTop += speed;
         }
     }
 
     function onEnd(e) {
         if (!draggingEle || !currentSortable) return;
-
         document.querySelectorAll('.tooltip').forEach(tooltip => tooltip.removeAttribute('style'));
 
         if (isDragging) {
@@ -2602,34 +2637,18 @@ function enableDragAndDrop(sortableClass, listId, updateOrderCallback, rowSelect
             } else {
                 currentSortable.appendChild(draggingEle);
             }
-
             if (currentListId === listId) {
                 updateOrderCallback();
             }
-        } else {
-            // Sadece dokunmatik cihazlarda tıklama olayını tetikle
-            const touchEndTime = new Date().getTime();
-            if (isTouchEvent && !touchMoved && (touchEndTime - touchStartTime < 300)) {
-                const originalTarget = document.elementFromPoint(startX, startY);
-                if (originalTarget) {
-                    const clickEvent = new MouseEvent('click', {
-                        view: window,
-                        bubbles: true,
-                        cancelable: true
-                    });
-                    originalTarget.dispatchEvent(clickEvent); 
-                }
-            }
         }
-
         const spanElement = draggingEle.querySelector('span');
         if (spanElement && spanElement.parentElement) {
             spanElement.parentElement.classList.remove('dragging');
         }
         if (dragPreviewEl) {
             dragPreviewEl.remove();
-            dragPreviewEl = null;
         }
+
         document.removeEventListener('mousemove', onMove);
         document.removeEventListener('touchmove', onMove);
         document.removeEventListener('mouseup', onEnd);
@@ -2638,7 +2657,6 @@ function enableDragAndDrop(sortableClass, listId, updateOrderCallback, rowSelect
         draggingEle = null;
         currentSortable = null;
         isDragging = false;
-        currentListId = null;
     }
 }
 function updateTaskOrder(tabType) {
@@ -3851,6 +3869,7 @@ document.getElementById('color-picker').addEventListener('input', function (even
     const colorButton = document.getElementById('color-button');
     colorButton.style.backgroundColor = selectedColor;
 });
+
 </script>
 </body>
 </html>
