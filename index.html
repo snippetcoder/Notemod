@@ -2545,7 +2545,7 @@ function enableDragAndDrop(sortableClass, listId, updateOrderCallback, rowSelect
         if (!isDragging && (deltaX > 5 || deltaY > 5)) {
             const currentTime = new Date().getTime();
             const timeElapsed = isTouchEvent ? currentTime - touchStartTime : 0;
-            if (!isTouchEvent || (isTouchEvent && timeElapsed >= 1000)) {
+            if (!isTouchEvent || (isTouchEvent && timeElapsed >= 700)) {
         const spanElement = draggingEle.querySelector('span');
         if (spanElement && spanElement.parentElement) {
             spanElement.parentElement.classList.add('dragging');
