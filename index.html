@@ -3201,9 +3201,26 @@ setTimeout(() => {location.reload();}, 700);
   input.click();
 });
 //gist veri ekleme
-const gistId = localStorage.getItem('gistId');
-const gistToken = localStorage.getItem('gistToken');
-const gistFile = localStorage.getItem('gistFile');
+let gistUpdateTimeout;
+let isUpdating = false;
+const updateGist = () => {
+  clearTimeout(gistUpdateTimeout);
+  gistUpdateTimeout = setTimeout(async () => {
+    if (isUpdating) return; 
+    isUpdating = true;
+    try {
+      const yeniIcerik = JSON.stringify(getStorageData(), null, 2);
+      const gistId = localStorage.getItem('gistId');
+      const gistToken = localStorage.getItem('gistToken');
+      const gistFile = localStorage.getItem('gistFile');
+      if (gistId) {
+        await gistGuncelle(gistId, gistFile, yeniIcerik, gistToken);
+      }
+    } finally {
+      isUpdating = false;
+    }
+  }, 500);
+};
 async function gistGuncelle(gistId, dosyaAdi, yeniIcerik, token) {
   try {
     const eskiSyncDegeri = localStorage.getItem('sync');
@@ -3213,7 +3230,7 @@ async function gistGuncelle(gistId, dosyaAdi, yeniIcerik, token) {
     } catch (e) {
       throw new Error('yeniIcerik JSON formatında değil');
     }
-    parsedIcerik.sync = '1'; 
+    parsedIcerik.sync = '1';
     const guncelIcerik = JSON.stringify(parsedIcerik, null, 2);
     const response = await fetch(`https://api.github.com/gists/${gistId}`, {
       method: "PATCH",
@@ -3229,20 +3246,19 @@ async function gistGuncelle(gistId, dosyaAdi, yeniIcerik, token) {
         },
       }),
     });
-
     if (!response.ok) {
       throw new Error('Gist güncelleme hatası');
     }
     localStorage.setItem('sync', '1');
-document.querySelector('button#sync').classList.add('aktif');
+    document.querySelector('button#sync').classList.add('aktif');
     if (eskiSyncDegeri === '0') {
       alert(translate("sync_active"));
     }
     return true;
   } catch (error) {
     if (localStorage.getItem('sync') === '1') {
-document.querySelector('button#sync').classList.remove('aktif');
-alert(translate("sync_error_message"));
+      document.querySelector('button#sync').classList.remove('aktif');
+      alert(translate("sync_error_message"));
       localStorage.setItem('sync', '0');
     }
     console.log('Gist güncelleme hatası:', error.message);
@@ -3254,7 +3270,7 @@ async function gistKontrol(gistId, token, gistFile) {
     const response = await fetch(`https://api.github.com/gists/${gistId}`, {
       method: "GET",
       headers: {
-        "Authorization": `Bearer ${token}`,
+        Authorization: `Bearer ${token}`,
       },
     });
     if (!response.ok) {
@@ -3264,25 +3280,15 @@ async function gistKontrol(gistId, token, gistFile) {
     if (!gistData.files || !gistData.files[gistFile]) {
       throw new Error(`Dosya bulunamadı: ${gistFile}`);
     }
-    return true; 
+    return true;
   } catch (error) {
     console.error("Gist kontrolünde hata mevcut", error);
-    return false; 
+    return false;
   }
 }
-let gistUpdateTimeout;
-const updateGist = () => {
-  clearTimeout(gistUpdateTimeout);
-    gistUpdateTimeout = setTimeout(() => {
-    const yeniIcerik = JSON.stringify(getStorageData(), null, 2);
-    const gistId = localStorage.getItem('gistId');
-    const gistToken = localStorage.getItem('gistToken');
-    const gistFile = localStorage.getItem('gistFile');
-    if (gistId) {
-      gistGuncelle(gistId, gistFile, yeniIcerik, gistToken);
-    }
-  }, 100);
-};
+const gistId = localStorage.getItem('gistId');
+const gistToken = localStorage.getItem('gistToken');
+const gistFile = localStorage.getItem('gistFile');
 //gist end
 const sync = document.getElementById('sync');
 sync.addEventListener('click', () => {
